@@ -1,0 +1,1185 @@
+---
+title: |
+ | College Student Life During the COVID-19 Outbreak
+ | Research Appendix
+author: "University of Washington, Department of Sociology"
+date: 'June 9, 2020'
+output: html_document
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+ 
+
+---
+
+```{r Setup, include = FALSE} 
+knitr::opts_chunk$set(echo = FALSE, fig.height = 3.5, fig.align = "center")
+
+#Sourcing variables from our Analysis script (Where all plots/tables are)
+source("DescriptiveStatisticsTest.R")
+library(kableExtra)
+
+```
+
+# {.tabset}
+
+## Home
+
+### Spring 2020 Sociology 403 Research Practicum Appendix
+
+---
+
+### Table Of Contents
+1. Research Overview
+1. Background Information and Demographics
+2. Housing Related Questions
+3. Online Learning During The Outbreak
+4. Changes in Post-graduation Plans
+5. Changes in Physical and Mental Health
+6. Life in the Time of Social Distancing
+7. Financial and Employment Changes
+
+### Research Team 
+
+**Instructor:**\
+Steven M. Karceski 
+
+**Students:**\
+Nathan Abei, Bezawit Belete, Alex Chan, Kevin Daugard, Jessica Edge,\
+Kenton Ho, Neil Kato, Xiaoran Liu, Allan Louie, Yasmin Solano, Colin Yao
+
+## Overview
+
+### Research Overview
+
+On March 6, only weeks before the start of the Spring quarter, the University of Washington suspended in-person instruction due to the outbreak of COVID-19. The spring 2020 quarter has been conducted entirely online, including our class. Typically, SOC 403 classes decide on a research topic with the help of our friends at the City of Seattle. Past classes have studied a variety of issues, most recently how undergraduate students are impacted by labor and housing policies.
+
+This quarter we studied how undergraduate students are dealing with the changes related to COVID-19. We believe our research is important because students will likely experience the crisis in a way that is unique from other groups. Undergraduate students are at a formative stage of life where they learn important skills to enter the labor market, (often) learn how to live on their own, and make social ties that provide benefits long into the future. College experiences teach students how to act in various social and professional contexts, socializing them in adult life. Disruption of and changes to these processes may have long-term consequences, so understanding the changes experienced by students is key. 
+
+### Data Collection
+
+To investigate how undergraduate students are dealing with the changes associated with the outbreak of COVID-19 and the transition to online learning we collected data with a survey and follow-up interviews. 
+
+### Survey
+
+In order to determine the impact of COVID-19 on undergraduate students in Washington State, we used a survey with the option of follow-up interviews. We created the survey with Google Forms. Our survey focuses on four main areas: (1) online learning experience; (2) graduation and post-graduation plans; (3) social, physical, and mental health, and (4) economic and financial characteristics. Given the large amount of overlap and connection between certain topics, using four main themes will provide the most detailed and straightforward description of our findings. 
+ 
+Due to the current “Stay Home, Stay Healthy” order in Washington State, we were limited in our means to promote participation. Promotional methods proven to be effective in the past were not an option, such as passing out flyers around campus, administering the survey in-person with iPads (also on campus), and posting flyers on and off campus
+
+The constraints related to quarantine and online learning meant we primarily relied on social media and our personal networks. We created digital advertisements to circulate around social media, among our friends, and to instructors and professors. These platforms include Twitter, Instagram, Facebook, and Tinder – the latter not working nearly as well as the others.
+
+### Our Survey Sample
+
+Our survey went live on **May 7, 2020** and was closed on **May 27, 2020**. The survey was up for 20 days and garnered a total of 198 responses. Out of the 198 responses roughly ¾ (73%) attended one of the three University of Washington campuses, which, again, is likely the result of primarily distributing our survey through our own social networks.
+
+
+## Background Information and Demographics
+
+### Background Information and Demographics{#section1} 
+
+This section shows the demographic makeup of our survey participants, as well as some other general information about our sample.
+
+---
+
+### Age 
+
+#### Question: "`r lookup("age")`"
+
+The plot below shows the age distribution among our respondents. 
+
+```{r, fig.align = "left"} 
+AgeDistribution_Plot
+
+```
+
++ The mean age is `r round(mean(data$age), 2)` years old
++ The median age is `r median(data$age)` 
++ The oldest respondent is `r max(data$age)` 
++ The youngest is `r min(data$age)` 
+
+These statistics show our sample is made up of mostly traditional college age students. There are of course exceptions; `r nrow(data %>% filter(age > 22))` of `r nrow(data)` total respondents are over the age of 22, or `r round(100*nrow(data %>% filter(age > 22))/nrow(data), 2)` percent of the sample. 
+
+----
+### Racial Groups
+
+#### Question: "`r lookup("race")`"
+
+The table bellow sorts the race categories from most-represented in our sample to the least represented. 
+
+```{r}
+RaceCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, 
+                font_size = 13, position = "left") 
+
+```
+
+We can see the vast majority of responses fall into the White and Asian categories. Given this, we probably won't have enough observations from the other groups to be able to make any claims about associations with those identities. An alternative way of describing the race quesiton is to create dummy variables for White, Asian, and Other. 
+
+We also might want to use an alternative variable for race that only takes one of the three categories white, asian, or other. (This is different from dummy variables since dummies are each their own variable. The new race variable, called `race_3`, is one variable that takes one of three vales.) The table below summarizes the new three-category race variable.
+
+```{r, warning = F} 
+RaceCountCleaned %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, 
+                font_size = 13, position = "left")  
+
+```
+
+----
+### Ethnicity
+
+#### Question: "`r lookup("hispanic")`"
+
+```{r}
+HispanicCount %>%  
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+In the style of the US Census, we keep race and ethnicity as separate questions. This means people can pick any race and in addition identify as Hispanic/Latinx, or not. The table to the right shows that `r round(100*mean(data$hisp), 2)` percent of the sample identifies as Hispanic or Latinx.
+
+The plot below shows the racial composition of our sample and breaks down each racial category according to its Hispanic/Latinx composition. 
+
+
+```{r, fig.align = "left"}
+RaceBarChart_HispComposition
+
+```
+
+This shows that most of the respondents who identify as Hispanic or Latinx categorized themselves into the "Other" race category and a much smaller amount in "White" (there were no Asian and Hispanic/Latinx respondents). It also shows that a significant proportion of the "Other" category is made up of respondents identifying as Hispanic or Latinx. 
+
+----
+### Gender
+
+#### Question: "`r lookup("gender")`"
+
+```{r}
+GenderCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "left") 
+
+```
+
+The majority of our respondents identified as female with about 55%. About 40% identified as male. We believed that this was the result of the female willingness to participate in our study. We also noticed that the majority of our interviewees identified as female. There is also a higher population of females attending college in the state of Washington.
+
+----
+### First Generation
+
+#### Question: "`r lookup("par_bach")`"
+
+```{r}
+FirstGenCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+Our question about parents education (whether either received a four-year degree) is one of the best measures of social and economic status (SES) we have in our survey. Since our survey question asks whether either parent completed a bachelor's degree, we create a new variable called `first_gen` that shows whether the respondent would be the first in their family to complete a four-year degree. So if the question response was no, then the new variable takes the value `"Yes"`. The table to the right summarizes the new variable. 
+
+The figure below shows the racial makeup of the new variable. This plot uses the "fill" setting to show the proportion of each response (first gen or not) represented by the  three racial categories. 
+
+```{r} 
+FirstGen_Race_Plot
+
+```
+
+This shows that the group of first generation students is slightly less white, much less Asian, and much more "Other" than the non-first generation group. 
+
+----
+### Residency Status
+
+#### Question: "`r lookup("residency")`"
+
+```{r}
+ResidencyCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+This the table to the right shows a large majority of respondents are US Citizens, followed by a much smaller proportion of respondents falling into categories for International Students, US Permanent Residents, and Undocumented/DACA. It's possible that undocumented/DACA recipients are less willing to take a survey or if they do less likely to report their status. 
+
+We can also do a race breakdown of the different residency statuses. The plot below shows the responses to the residency question broken out by the three-category race variable.  
+
+```{r, fig.align = "left"}
+RaceDistribution_ByResidency_Barchart
+  
+```
+
+This shows the majority of International Students identify as Asian, undocumented/DACA as "Other", and US Permanent Resident as "other". Within the US Citizen category we see a majority of respondents identifying as white, but a good number identifying as Asian and Other as well. 
+
+
+---
+
+
+### Politcal Ideology 
+
+#### Question: "`r lookup("pol_views")`"
+
+We modified this variable by subtracting 4 from the seven-point scale, making the center value (4) take a value of zero. We call this new variable `ideology`. 
+
+```{r, fig.align = "left"}
+PoliticalIdeology_PercentDistribution
+
+```
+
++ The mean ideology is `r round(mean(data$ideology), 2)` 
++ The median ideology is `r median(data$ideology)` 
++ `r (n <- nrow(data %>% filter(ideology == max(ideology))))` respondent`r ifelse(n > 1, "s","")` identif`r ifelse(n > 1, "y","ies")` as 'very conservative'
++ `r nrow(data %>% filter(ideology == min(ideology)))` respondents identify as 'very liberal'
+
+<br>
+
+#### Question: What are the politcal preferences across differnt grades?
+
+```{r, fig.align = "left"}
+PoliticalViews_ByGrade_Plot
+
+```
+
+As students progressed through their undergraduate education, they became more and more liberal and less conservative with no 5th year students identifying on the conservative side of our spectrum. This is consistent with the trend of education leading to more liberal views. Studies have shown that individuals with a college degree will be significantly more conservative than those with only a high school diploma.
+
+----
+### School
+
+#### Question: `r lookup("school")`
+
+```{r}
+SchoolCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right")
+```
+
+For this question, respondents were allowed to write in their responses. This means the responses for one school (like University of Washington) could be written in more than one way (UW, university of washington, UW-Seattle, etc.). To deal with this, we changed all responses to lower case text (to prevent mismatch based on case-sensitivity) and grouped responses together according to rules we created. For example, responses that include the text `washington` and `seattle` were recoded as `uw seattle`. We did this to the best of our ability to match the appropriate responses together. We condensed the current responses to `r length(unique(data$school))` schools (this was done separately in the "data_download.R" script). The unique schools in our sample are displayed in the table to the right. 
+
+At this point we have a very large proportion of our sample attending University of Washington in Seattle and University of Washington without a specified campus. It's probably safe to assume the respondents mean the main Seattle campus, but for now we won't make that assumption. Right now, only `r round(100*(nrow(data %>% filter(school == "uw (nonspecified)"))/nrow(data)), 2)` percent of the indicated they currently attend a school that is not in the top two categories. 
+
+----
+### Major 
+
+#### Quesiton: `r lookup("major")`
+
+The `major` question has issues similar to the `school` variable. However, it's probably *not* worth grouping all the majors together since the high number of unique responses (`r length(unique(data$major))` in total) is not due to mis-categorization, but because there actually are a lot of different majors in the sample. In other words, even if did take the time to adjust the responses, there probably wouldn't be enough responses in *any* major to allow us to make any strong claims about any of them.  
+
+```{r} 
+MajorCount %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "left") 
+
+```
+
+Therefore, unless we can come up with a good reason to do otherwise, we're going to leave the major catagories as they were written in. The table below shows the ten most common write-in majors in our sample. 
+
+---
+
+### Other Background Related Questions
+
+#### Credible Information  
+
+##### Question: `r lookup("cred_natl_news")` 
+
+```{r, message = F, warning = F} 
+NewsCredabilityTable %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c(" " = 3, "Government" = 3))  
+
+```
+
+The figure to the right summarizes the responses to a series of questions on the perceived credibility of various institutions: national news, local news, and city, state, and federal governments. Respondents can mark Yes, No, It depends, and Unsure/not applicable. The perceived credibility of listed institutions vary significantly. Local news is viewed as more credible than the national news. State and city governments are viewed as credible by far more respondents than those who view the federal government as credible. In fact, the only institution with a negative net credibility rating is the federal government (the `r nrow(data %>% filter(leave_usa == "Yes"))` respondents who left the country were excluded from this calculation). 
+
+<br>
+
+#### News source
+
+##### Question: `r lookup ("news_source")`
+
+```{r}
+NewsSourceUsageTable %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+The table to the right displays the percentage of respondents that report getting their COVID-19 related news from the listed sources. National TV includes major networks and major cable news sources; government includes state, local, federal government sources as well as government organizations like the Center for Disease Control; newspapers include national and local newspapers; and "Other sources" includes podcasts, blogs, forums, and news aggregators (such as  Reddit). 
+
+The table shows the most popular source is social media at `r pct_m(data$ns_social)`%, followed by the government at `r pct_m(data$ns_government)`%. Roughly half the sample receives information from government sources, family, friends, newspapers, and national TV. Local TV and other sources were significantly lower than 50% of the sample. Finally, two respondents wrote in "work" to indicate they receive information from their employer or fellow employees. 
+
+This is something the City might be interested in. A lot of students are getting their information from social media like Facebook, Instagram, Twitter, etc. The City of Seattle could consider disseminating information via social media, since it appears it might be particularly effective at reaching undergraduate students. 
+
+---- 
+
+## Housing
+
+### Housing Related Questions
+
+This section takes a look at our survey questions related to housing before the outbreak and any changes that may have occured since the outbreak of COVID-19. 
+
+---
+
+### Secure housing before the outbreak 
+
+#### Question: `r lookup("before_secure")` 
+
+```{r}
+SecureHousingCountBefore %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+Not many respondents were living in 'insecure' housing conditions prior to the outbreak; currently only `r (n <- nrow(data %>% filter(before_secure == "No")))`. We shouldn't assume this means there are approximately `r round(100*(n/nrow(data)), 2)` percent of undergraduate students living in such conditions. In fact, this very low number may be due to a selection bias that is the result of being limited to online methods of recruiting participants. And even if it is accurate that `r round(100*(n/nrow(data)),2)` percent of undergraduate students in WA state live in these conditions, this still means that at a school the size of UW there are approximately `r round(31041*(n/nrow(data)), 0)` students living in 'insecure' housing conditions. 
+
+---
+
+### Housing type
+
+The following two questions were asked to respondents regarding their housing situation before and after the outbreak of COVID-19. The quesiton asked prior to the outbreak was asked to everyone who indicated they live in 'secure' (more on this below) housing, while the second was asked only to respondents indicating (1) they experienced a change in housing since the outbreak of the virus **and** (2) they currently live in 'secure' housing conditions. 
+
+* **Prior to the outbreak**: `r lookup("bs_housing")` 
+* **After to the outbreak/current housing**: `r lookup("cs_housing")` 
+
+But these two questions leave out respondents who live in 'insecure' housing; these respondents given an `NA` for each of these questions. So to get a table with the before and after housing charactertics we have to manually add in the 'insecure' respondents (both before and after the outbreak). The code for creating these variables can be viewed in the .Rmd file and in the "data_download.R" script. 
+
+```{r, message = F}
+HousingTypeChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c(" " = 1, "Percentage of Sample" = 2, "Since Outbreak" = 2)) 
+
+```
+
+The first column of the table shows the housing type. The second and third columns show the percentage of the sample that fall into each of the housing categories before and after the outbreak of COVID-19. The last two columns show (1) the percentage point (PP) change from before to after and (2) the ration of respondents falling into each catagory after over before (after/before). The PP change reflects the change in terms of percentage of the total sample. The ratio shows the 'after' value in terms of the 'before' value. So a category representing 5% of the sample before that increases to 10% after has a PP Change of 5% but a A/B Ratio of 2.0 (in other words, the number of respondents in the category doubled). If the ratio is greater than one it means the count in that category increased and if it is less than one (it cannot be negative) it means the count in the category decreased. 
+
+The table is sorted to show the largest positive PP Change at the top. We can see the largest PP change was for Parents/Guardians, meaning a lot of respondents moved in with parents/guardians. The ratio suggests the number of respondents from before to after almost tripled. The number of people living in insecure housing conditions also shows a very high ratio, but the starting number is much smaller, meanin the numbe rof people moving into that category wasn't that big when viewed as a percentage of the sample. We see a moderate decrease among people living off-campus and a very large decrease among respondents living on-campus. This makes sense, since we know a lot of people were required to move out of dorms. 
+
+---
+
+### Roommates, internet, and computers
+
+Like the table on housing above, the next three tables show the percentage of resppondents that fall into each category before and after the outbreak, as well as the percenatage point change and the after/before ratio. The first is the number of people the respondent lives with, followed by access to internet and access to a computer. 
+
+```{r, message = F}
+RoomateChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c(" " = 1, "Percentage of Sample" = 2, "Since Outbreak" = 2)) 
+
+```
+
+The largeest increase can be seen among people living with 2 or more people, the changes are low in the insecure and living alone categories, and there's a large decrease in people living with one other person. This makes sense as people move back home or in with other friends/family to save money or because they were required to leave dorms. 
+
+Overall, respondents are on average living with more people than before the outbreak. We can't measure this exactly because we didn't ask for a specific number of roommates beyond two, but we see there is a decrease in the number of people living alone and with one other person, and an increase in those living with two or more other people. There's also an increase in insecure housing, but we know from their responses that they primarily sleep at their friends, meaning they are living at least with one other person. 
+
+```{r, message = F}
+InternetAccessChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c(" " = 1, "Percentage of Sample" = 2, "Since Outbreak" = 2)) 
+
+```
+
+Next is internet access. The table to the right shows the same same figures: before, after, PP change, and A/B ratio. The table doesn't show any dramatic changes, but the changes are in the direction we would expect. People with unreliable internet access increased with a moderate PP change (the percentage change in terms of the percentage of the sample) and a large A/B Ratio, meaning the number of respondents reporting unreliable internet access doubled since the outbreak. The number of people without any access to the internet did not change since the outbreak, and they represent a small proportion of the sample. 
+
+```{r, message = F}
+ComputerAccessChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c(" " = 1, "Percentage of Sample" = 2, "Since Outbreak" = 2)) 
+
+```
+
+The next table (to the right) shows access the before and after access to a computer reported by our respondents. We only see a small change, with slightly more respondents reporting having to share a computer or having occasional access (for those living in insecure housing). On the one hand, taken together with the low percentage of respondents not having internet access, this may be a good sign that the vast majority of students were well-equipped for the transition to online learning. On the other hand, it may reflect a sampling bias that results from promoting a survey solely online -- those without computers are less likely to encounter the survey. 
+
+---- 
+
+### Change in housing
+
+#### Question: `r lookup("housing_change")` 
+
+
+```{r}
+HousingTypeRelationToChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "left") %>% 
+  add_header_above(c(" ", "Change in Housing? (%)" = 2))
+
+```
+
+The table to the above shows the proportion from each housing type (prior to the outbreak) that experienced a housing change. The rates vary dramatically across housing types. This makes sense, as many students in fraternities/sororities and in on-campus housing (like dorms) were required to vacant their place of residence. On the other hand, students living with parents/guardians and living off-campus were much less likely to report a housing change since the outbreak. 
+
+
+```{r}
+
+h_change <- data %>% 
+  filter(housing_change == "Yes") 
+
+```
+
+
+```{r}
+
+h_change %>% 
+  summarize(`Moved back home` = round(100*mean(hc_to_parents), 2),
+            `Left on-campus housing` = round(100*mean(hc_leave_camp), 2),
+            `Left greek housing` = round(100*mean(hc_leave_greek), 2),
+            `More roommates` = round(100*mean(hc_more_mates), 2),
+            `Fewer roommates` = round(100*mean(hc_fewer_mates), 2),
+            `From secure to insecure` = round(100*mean(hc_to_insecure), 2),) %>% 
+  pivot_longer(1:6, names_to = "Change Type", values_to = "% of Subset") %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "float_right") %>% 
+  add_header_above(c("Changed-Housing Subset" = 2)) 
+
+```
+
+The first three items in the table to the right shed light on the reasons for the reported change in housing. Almost one half (`r round(100*mean(h_change$hc_to_parents), 2)`%) of the subset moved in with parents or guardians. A large percentage of the subset left on-campus housing (`r round(100*mean(h_change$hc_leave_camp), 2)`%) and smaller left greek housing (`r round(100*mean(h_change$hc_leave_greek), 2)`%). 
+
+The fourth and fifth items reflect changes in the number of people respondents lived with. These variables are conservative underestimates of the actual changes; if people indicated they live with two or more people before and after the outbreak, we have no way of knowing if there was a change, even if they live with more or fewer people since the outbreak. Even with these imperfect estimates, we can see significant changes in living arrangements. Of those reporting a change in housing, `r round(100*mean(h_change$hc_more_mates), 2)`% report living with more people and `r round(100*mean(h_change$hc_fewer_mates), 2)`% reporting living with fewer people. 
+
+Finally, the table shows that `r round(100*mean(h_change$hc_to_insecure), 2)`% of the subset moved from secure housing to insecure housing. 
+
+---
+
+### Insecure Housing
+
+We don't have many responents who reported living in insecure housing conditions. In the survey, we define insecure housing as the following: 
+
+> When we say "secure" housing, we mean either (1) having a stable place of residence in a dorm, apartment, or house, or (2) living with parents, guardians, or other family/friends. Not having "secure" housing includes experiencing homelessness as well as temporary housing in shelters, with friends, emergency accommodations, or boarding houses. 
+
+```{r} 
+
+insecure <- data %>% 
+  filter(before_secure == "No" | current_secure == "No") 
+
+```
+
+We don't have a lot of people reporting to live in 'insecure' conditions. In total, we have only `r nrow(insecure)` observations that fall into 'insecure' housing conditions either before the outbreak or currently. 
+
+```{r}
+
+insecure %>% 
+  select(`Before` = before_secure, `Current` = current_secure, Gender = gender, Race = race, 
+         `First Gen.` = first_gen, Residency = residency, School = school) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "left") %>% 
+  add_header_above(c("Secure Housing" = 2, " " = 5)) 
+
+```
+
+The one thing that sticks out is first generation status. First generation students make up `r round(100*mean(data$first_gen_d), 2)`% of the total sample but `r round(100*mean(insecure$first_gen_d), 2)`% of those living in insecure housing conditions. 
+
+The table below shows living situations of the `r nrow(insecure) ` respondents pior to (we already know `r (n <- nrow(data %>% filter(before_secure == "No")))` of them `r ifelse(n == 1, "was", "were")` in insecure housing prior to the outbreak) and since the COVID-19 outbreak.
+
+```{r} 
+
+insecure %>% 
+  select(`Before Outbreak` = bs_housing, `Situation Before` = bi_situation, 
+         `Current Situation` = ci_situation) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), full_width = F, font_size = 13, position = "left")
+
+```
+
+Below are a few observations on the inscure subset. Of the `r nrow(insecure)` respondents in the subset: 
+
+* `r nrow(insecure %>% filter(str_detect(bs_housing, "On-campus")))` lived in on-campus housing prior to the outbreak
+* `r nrow(insecure %>% filter(str_detect(bi_situation, "spare beds") | str_detect(ci_situation, "spare beds")))` lived reported living at a friends place sleeping on a floor, spare bed, or couch 
+
+---- 
+
+## Online Education
+
+### Online Learning During The Outbreak 
+
+This section explores the experience of college online learning. Here we assess our survey questions on experiences with the transition to online learning and education under the conditions of the COVID-19 crisis. Our questions are split into a few general categories: course changes, accessibility of reliable technology and internet required for online learning, accessibility of school resources, and the effectiveness of online learning.
+
+---
+
+### Background Information Related To Online Learning
+
+#### Question: `r lookup("cancelled_course")`
+
+```{r}
+data %>% 
+  group_by(cancelled_course) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)), 1)) %>% 
+  rename(Count = n) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+Around 20% of respondents reported having a class cancelled.  Potential reasons for this could include: inability to perform certain essential class activities (ex. Labs, fieldwork) and/or diminished class registration (ex. Taking time off, dropped out, changing schedule due to COVID-19, etc.). Furthermore, it is difficult to determine if this figure is close to accurate, given bias in the sample that may include more people in certain majors (some majors may have coursework that has disproportionately been disrupted by the transition to online learning), etc. 
+
+<br>
+
+#### Question: `r lookup("vol_change")`
+
+```{r}
+data %>% 
+  group_by(vol_change) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)), 1)) %>%
+  rename(Count = n,
+         "Voluntary Changes" = vol_change) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+Around 50 percent of respondents reported voluntarily changing their schedule due to the COVID-19 outbreak. A decent portion of the class changes may be due to limitations of certain classes under online learning (ex. Labs, fieldwork).  Another potential reason for a voluntary change could be due to adding  courses. This could especially be true for those with increased amounts of time for studying due to COVID-19 and social distancing guidelines, which may lead to students taking a larger course load than they otherwise would have.
+
+<br>
+
+#### Question: `r lookup("slow_tech")`
+
+```{r}
+data %>% 
+  group_by(slow_tech) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)), 1)) %>%
+  rename(Count = n,
+         "Slow Technology" = slow_tech) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+A majority of respondents reported either rarely (43.4%) or never (16.2%) experiencing slow technology. In contrast, 27.3% sometimes experiences slow tech, 10.1% often does, and 3.03% always does.  Experiencing slow technology may be due to a decreased access to school technology resources (repair, rentals, computer labs, etc.). Furthermore, it’s important to note that our results may under represent the amount of students frequently experiencing slow tech. In order to take this survey, respondents must use a tech device (phone, laptop, etc.). If they have slow tech, they may not be able to and/or may have increased difficulty in taking the exam. 
+
+<br>
+
+#### Question: `r lookup("devices")`
+
+```{r}
+Devices %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+```
+
+The majority of students use a combination of devices (our sample showed 14 unique combinations). Regardless of combination, 94.5 percent use a laptop, 45.9 percent uses a smart phone, 18.2 percent uses a tablet, and 17.1 percent use a desktop computer. While, unsurprisingly laptops are the most widely used, our sample may report a higher number than is accurate. Our sample may skew more towards those who own laptops. This could be because of the nature of having an online survey in which respondents need to use a tech device, limitations we have in physically distributing the survey (leading to online distribution), etc. 
+
+---
+
+### Reported Changes In Education Behavior
+
+#### Question: How do students view various aspects of their involvement in online learning compared to prior to the outbreak.
+
+The table and plot bellow summarizes the responses to a series of questions related to how students view various aspects of their involvement in online learning compared to prior to the outbreak. The first question, above, asks whether respondents believe their focus on school work has changed since the outbreak. Respondents can indicate each item has increased, decreased, or remained the same. The items are focus on school work, motivation on school work, time spent on school work, attendance to lectures and sections, and participation in lectures or sections. The last two questions include a "not applicable" response to allow sensible responses for those who do not attend traditional classes, such as music, art, or science students taking lab courses. 
+
+```{r, message = F, warning = F} 
+EducationBehaviorChange_Table %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "left") 
+
+```
+
+```{r, message = F, warning = F, fig.align = "left"} 
+Education_behavior_plot
+
+```
+
+With the exeption of attendace, the majority of respondents indicate each item has decreased since the outbreak (and only a small percentage of respondents indicated their attendance has increased). This suggests students are, on average, finding their focus on school work, motivation for school work, time spent on school work, and participation in their classes is lower than it was prior to the outbreak. 
+
+<br>
+
+#### Question: `r lookup("workspace_b")`
+
+```{r, message = F}
+WorkSpacePercentageChange %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+
+```
+
+The table to the right shows the percentages of our sample that primarilyp perform schoolwork in the listed spaces both before and since the outbreak of COVID-19. Prior to the outbreak, most respondents report primarily using university spaces for study, followed by their own place of residence. Currently, the vast majority of respondents (`r round(100*(nrow(data %>% filter(str_detect(workspace_c, "My place")))/nrow(data)), 2)`%) report primarily performing school work at their current residence. The percentage point increase is largest for this category -- as we would expect given the stay-at-home orders -- and the largest decrease can be seen among respondents working at college or university spaces (libraries, computer labs, lounges, etc.). The only other category to show an increase is working at a friend's residence, but the increase is still quite small. The private establishment (coffee shop, restaurants, etc.) and public library or community center both decreased (and in the case of the latter, went to zero). Overall, these results are what we couldwould expet to see given social distancing and stay-at-home orders. 
+
+---
+
+### Effectiveness Of Online Leanring During The Outbreak 
+
+#### Question: How do students perceive the effectiveness of certain aspects with E-Learning prior to the outbreak
+
+```{r, fig.align = "left"}
+Education_InstructionPlot
+```
+
+We wanted to learn more about how students perceive the effectiveness of certain aspects with E-Learning prior to the outbreak. The plot above summarizes the results we recived for this particualr question. In our survey, we asked students a series of questions relating to accommodating scenarios and course materials within an online environment. Respondents can indicate their answers by selecting whether each item is less effective, more effective, remains the same, or is unsure. The items that were asked are Accommodation for diverse learning needs, accommodation for special circumstances, and communication of course material. 
+
+---
+
+### Education Resource Avaibility During The Outbreak 
+
+#### Question: How do students feel about the availblity of certain  college resources compare to prior to the outbreak
+
+```{r, fig.align = "left"}
+Education_avalability_plot
+```
+
+About 50% of our respondents reported academic tutoring to be less available. About 25% were unsure. We expected this to be the case because online tutoring services are likely to be of lesser quality and students are less likely to seek help over zoom office hours than in person. We also expected a certain group to be unsure because certain people don’t seek tutoring services.
+
+About 60% of our respondents reported office hours being just as available while about 25% reported it being less available. We expected this to be the case because the majority of professors and instructors are still making themselves available over zoom to help their students. Students may report it being less available due to the limitations of the type of help that may be given over Zoom. 
+
+About 40% of survey respondents reported academic advising to be just as available and another 40% reported it being less available. We expected this to be the case because the majority of academic advisers, at least at the uw, are still working the same hours and offering help over email, phone, etc. It may be less available due to the limitations of the service.
+
+About 60% of our respondents were unsure about the availability of disability resources while about 25% reported it being less available. We had expected the majority of our respondents to be unsure about the availability of disability services because the majority of undergraduates aren’t using disability resources to begin with.
+
+About 40% were unsure about changes to the availability of career advising while about 30% reported it being less available. We had expected this to be the case because the majority of college undergraduates aren’t aware of the career advising resources on campus. It is also less likely for under-classmen to seek help from these services.
+
+
+---
+
+## Graduation Plans
+
+### Changes In Post-graduation Plans
+This section explores the topic of how the COVID-19 outbreak has impacted student graduation plans. Here we assess our survey questions related to graduation plans before the outbreak and any changes that may have occured since the outbreak of COVID-19. 
+
+---
+
+### Pre-Outbreak Post Graduation Plans
+
+#### Question: `r lookup("chng_grad")`
+
+```{r}
+data %>%
+  group_by(chng_grad) %>% 
+  tally() %>% 
+  mutate(percent = round(100*(n/sum(n)), 2)) %>% 
+  kable(col.names = c("Plan to Graduate","Count" ,"Percentage of Respodent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+The survey includes a series of questions related to graduation and post-graduation plans. Most survey respondents indicate that their plans to graduate remain intact. The table to the right shows that 82% of respondents indicate no change in their plans to graduate, 11% of survey respondents are delaying graduation, and about 7% of survey respondents are trying to finish their coursework sooner. These results are somewhat unexpected because the outbreak of COVID-19 has largely impacted how classes are taught, student housing, and employment among many other factors. We expect that more students would report delaying graduation and trying to finish classes sooner because the outbreak has simultaneously affected many aspects of students’ lives. 
+
+<br>
+
+#### Question: `r lookup("post_grad")`
+```{r}
+PreOutBreak_PostGradPlans_Table %>% 
+  kable(col.names = c("Post Graduation Plan", "Percentage of Respodent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+The survey asks respondents about their pre-outbreak post-graduation plans. Many survey respondents indicate they plan to look for a job, although graduation status affects respondents’ post-graduation plans. About 56% of our total survey respondents report that they plan to look for a job post-graduation. Although, Figure 4.3.1 shows that 40% of 2020 graduates plan to find a new job post-graduation and 61% of respondents not graduating in 2020 plan to. Attending graduate or professional school (35%), traveling (22%), and volunteer or service work post-graduation (21%) are the next most common collective responses. 
+
+<br>
+
+#### Post Graduation Plans and Graduation Status
+```{r, fig.align = "left"}
+PostGradPlan_V_GradStatus_Plot
+
+
+```
+
+According to the figure above, non-graduating respondents are far more likely to indicate they will attend graduate or professional school post-graduation (75%), while graduates are less likely to (25%). Non-graduates are somewhat more likely to plan to travel post-graduation (54%), with graduates being slightly less likely to (45%). Continually, non-graduating respondents are also somewhat more likely to indicate they will volunteer or perform service work (59%) compared to graduates (42%). Meanwhile, 16% of all survey respondents indicate that they have or had a job or internship secured post-graduation, and 7% of survey respondents plan to keep their current job post-graduation. About 32% of non-graduating respondents plan to pursue a job or internship post-graduation, while the figure is 68% for graduates. Additionally, 39% of non-graduates plan to keep their current job post-graduation, while 62% of graduates do. Finally, 28% of all survey respondents report they are undecided about their post-graduation plans. Yet, 78% of non-graduates indicate they are undecided about their post-graduation plans, while 22% of graduates do.
+
+
+---
+
+### Reported Changes In Post Graduation Plans
+
+#### Question: `r lookup("chng_post_grad")`
+
+```{r}
+data %>% 
+group_by(chng_post_grad) %>% 
+tally() %>% 
+mutate(percent = round(100*(n/sum(n)),2)) %>% 
+  kable(col.names = c("Post Graduation Plan Changes", "Count" ,"Percentage of Respodent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+Many survey respondents indicate that their post-graduation plans have changed since the COVID-19 outbreak. According to the figure to the right, 36% of respondents indicate that they expect a change in their post-graduation plans, and 27% have already experienced a change. Meanwhile, 37% of survey respondents indicate that they do not expect their post-graduation plans to change. This means 73% of respondents have experienced some form of  uncertainty about their post-graduation plans. 
+
+<br>
+
+#### Stratifying Post-Graduation Plans with Changes in Post-Graduation Plan
+```{r, fig.align = "left"}
+PostGradPlan_V_DiffChanges
+```
+
+The figure above shows 37% of respondents planning to perform volunteering and service work expect a change to their post-graduation plans, while 51% already had their plans change. Among respondents planning to travel, 30% expect a change and 54% have experienced a change. In fact, in an interview a graduating senior indicated that they planned to travel to Tokyo for the Tokyo Olympics after graduating, only for those plans to be cancelled. For those who were planning to keep their current job, 19% expect a change and 54% have already experienced a change. About 19% of respondents that secured a job or internship for post-graduation expect their post-graduation plans to change, and 52% have already seen their plans change. Lastly, among respondents planning to go to graduate or professional school post-graduation 38% expect a change to their plans and 23% have already experienced a change. 
+
+These results show that respondents intending to pursue graduate or professional school were the least likely to experience a change to their post-graduation plans. Meanwhile, respondents’ plans to do volunteer and service work, travel, keep current jobs, and pursue a post-graduation job or internship have all changed dramatically. 
+
+<br>
+
+#### Changes In Plans To Search For Post-Graduation Job
+```{r,fig.align = "left"}
+SeekNewJob_V_DiffChanges
+```
+
+As shown in the Figure above, 41% of respondents planning to look for a new job post-graduation expect their plans to change. Separately, about 30% of respondents that have already experienced a change to their post-graduation plans plan to look for a new job post-graduation.Thus, many students have likely had to rely on future employment to alleviate the current uncertainties they are facing. Furthermore, some of the students who had a future job or internship revoked or students that lost a current job may also be represented in this sample. Many of these current uncertainties may have to do with the upsurge of jobs and internships being revoked and the limited time students have to make alternative post-graduation plans. More respondents indicating that they expect their plans to change implies that respondents cannot rely on a currently secure job or internship to remain secure. 
+
+<br>
+
+#### Change in Post-Graduation Plans and Anxiety
+```{r}
+data %>% 
+  group_by(chng_post_grad, mh_anxiety) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  group_by(chng_post_grad) %>% 
+  mutate(percent = round(100*(n/sum(n)), 2)) %>% 
+  filter(mh_anxiety == "More often") %>% 
+  select(chng_post_grad, percent) %>% 
+  kable(col.names = c("Change in Post Graduation Plans","Experinced More Anxiety")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+Of the survey respondents who already had their post-graduation plans changed, 65.2 percent have experienced anxiety more often. In addition, for those who have not changed their post graduation plans as of yet but expect their post graduation plans to change in the future have shown a slightly increased experience of anxiety with respondents at 65.7 percent. Although the difference between is only 0.05%, there is a difference of 16 more survey responses that claimed to experience anxiety more often for those who expect their graduation plans to change in the future. This makes sense as these individuals are anticipating change but are unsure what the future holds for them, compared to those who already had changed their post graduation plans. For those who do not expect anything to change, the respondents who experienced about the same levels of anxiety and more often are very similar. Thus, we assume that their experience with anxiety is outside the variable of post-graduation plans. 
+
+---
+
+### Graduates With Pre-COVID-19 Jobs or Internships and had Job Revoked
+
+#### Post-Graduation Job or Internships by Graduation Status
+```{r}
+data %>% 
+  group_by(post_grad_job_intern2, grad_2020) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  group_by(grad_2020) %>% 
+  mutate(percent = round(100*(n/sum(n)), 2)) %>% 
+  kable(col.names = c("Job or Internship Post Graduation", "2020 Graduate", "Count",
+                      "Percentage of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+According to the table to the right, 28% of respondents graduating in 2020 report that they have or had a job or internship secured for post-graduation, while 8% of respondents not graduating in 2020 did. This meets our expectations that graduates are more likely to have jobs or internships prepared for after graduation than non-graduates because they are closer to entering the labor market and are more likely to be prepared for their post-graduation. 
+
+<br>
+
+#### Experience of Job Being Revoked by Graduation Status.
+```{r}
+data %>% 
+  group_by(job_revoke, grad_2020) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  group_by(grad_2020) %>% 
+  mutate(percent = round(100*(n/sum(n)), 2)) %>% 
+  kable(col.names = c("Job Revoked", "2020 Graduate", "Count",
+                      "Percentage of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+This table to the right shows that 34% of 2020 graduates had a job revoked, while 30% of respondents not graduating in 2020 did. This implies that a number of our respondents, both graduating and not, had jobs they did not report they had secured for post-graduation revoked. The COVID-19 outbreak has made the job market very precarious. It’s extremely unlikely any students anticipated something on the scale of the COVID-19 outbreak when making post-graduation plans. Students who have worked hard to acquire jobs and internships in preparation for their post-graduation lives have instantly lost progress towards some of their most important career opportunities.
+
+It is both discouraging and difficult for students to unexpectedly lose a job or internship and have to begin the process of looking for a new job or internship in a suddenly tight job market. Graduates, as opposed to non-graduates, have limited time to devote towards searching for a new job or internship because they likely have to manage the cost of housing and transportation among other expenses. As a result, graduates who lost a job or internship may have to settle for a temporary or unideal job in order to pay for their expenses while looking for a new job or internship opportunity. 
+
+<br>
+
+#### Reported Pre-COVID-19 Job or Internship Revoked.
+```{r, fig.align = "left"}
+PostGradPlan_V_JobRevoke
+```
+According to the Figure above, 39% of respondents that intend to keep their current job post-graduation have had their job revoked. Meanwhile, 52% of respondents that plan to pursue a job or internship post-graduation had their job revoked.
+
+These results partly indicate that respondents may have had a job or internship cancelled because of the COVD-19 outbreak or that respondents with current jobs were laid off. Continually, the respondents that lost their current job intended to continue being employed into their post-graduation. This implies that these respondents were likely relying on remaining employed in order to fulfil their plans. These students could have been relying on that career to help pay off finances, student loans, or other expenses. Moreover, students may rely on employment to pay off expenses so that they can pursue an alternative and more ideal form of employment such as a job or internship for a desired career. Thus, suddenly losing a source of employment that was originally perceived to be secure can impede students’ ability to make long-term career goals. 
+
+---
+
+## Health Changes
+
+### Changes in Physical and Mental Health
+This section explores the topic of how the COVID-19 outbreak has impacted student health. Here we assess our survey questions related to changes in physical activity, as well as changes in mental health
+
+---
+
+### Reported Changes in Mental Health
+
+#### Question: Compared to before the outbreak of COVID-19, how often do you currently experience difficulty concentrating on tasks, lack of motivation to do daily tasks, anxiety, and feeling sad or depressed?
+
+```{r, fig.align= "Left"}
+mental_health_plot
+```
+
+We asked students the following question in the survey: “Compared to before the outbreak of COVID-19, how often do you currently experience difficulty concentrating on tasks, lack of motivation to do daily tasks, anxiety, and feeling sad or depressed?” Participants were asked to answer these questions with the options: “Less often”, “About the same”, “More often”, and “Not applicable.” The Figure above summarizes the responses. The majority of survey respondents indicate they have experienced each of these categories more often compared to before the outbreak of COVID-19. In the end, 84.8% of our survey respondents indicate a lack of motivation for daily tasks happens more often and approximately 79.8% indicate more frequent difficulty concentrating on daily tasks.
+
+Approximately 57% of respondents indicate they experience anxiety more often and 55% of respondents indicate they experience sadness and/or depression more often compared to before the outbreak of COVID-19. One possible explanation that can affect these results is the amount of people that the survey respondents are living with currently. For those living with one or more people, they would experience less anxiety and sadness/depression compared to living alone.For survey respondents that reported that they lived alone, 60% reported feeling anxiety more often and 73.3% reported feeling depression more often. In comparison, 54.6% of survey respondents living with two more or more people indicated that they felt anxiety more often, and 52% indicated they experienced depression more often. However, concentration decreases for those living with one or more people compared to those living alone. Despite these differences in responses between concentration/motivation and anxiety/sadness, overall the responses that we received were what we expected.
+
+---
+
+### Reported Changes in Physical Health (Compared to before the Covid-19 Outbreak)
+
+#### Question: Compared to before the Covid-19 Outbreak, do you currently do the following activities more or less?
+
+#### Exercise 
+```{r}
+data %>% 
+  group_by(act_exercise) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_exercise, percent) %>% 
+  kable(col.names = c("Physical Exercise", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+
+```
+
+Compared to before the COVID-19 outbreak, around 63 percent of respondents reported exercising less, 16 percent are exercising about the same amount, while 21 percent are exercising more. The significant decline in exercise could be attributed to the effects of social distancing guidelines and the stay-at-home order, closure of public and private gym facilities, mental health issues, etc. 
+
+<br>
+
+#### Sleep
+```{r}
+data %>% 
+  group_by(act_sleep) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_sleep, percent) %>% 
+  kable(col.names = c("Sleeping Habits", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+Compared to before the COVID-19 outbreak, around 47 percent of respondents reported sleeping more, 32 percent reported sleeping about the same amount, and 21 percent reported sleeping less. The significant amount of respondents who report sleeping more could be due to a reduction in time sensitive obligations, general inability to go outside and interact with others, the result of mental health issues, etc. The ones who report less sleep may be essential workers, have increased responsibilities in the household, increased course loads (voluntary or involuntary), and/or may be experiencing sleep issues related to mental health concerns.
+
+<br>
+
+#### Watching TV
+
+```{r}
+data %>% 
+  group_by(act_tv) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_tv, percent) %>% 
+  kable(col.names = c("TV Habits", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Compared to before the COVID-19 outbreak, we found that there has been an increase in TV viewing hours. Around 66 percent of respondents reported watching more TV, 25 percent reported watching about the same amount, 5 percent reported watching less, and 3 percent responded “not applicable”. This finding was rather expected, as generally, people are confined to their houses and may have little else to entertain themselves.
+
+<br>
+
+#### Playing Games
+
+```{r}
+data %>% 
+  group_by(act_games) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_games, percent) %>% 
+  kable(col.names = c("Gaming", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Compared to before the COVID-19 outbreak, around 46 percent of respondents reported playing more games, 35 percent reported playing about the same amount, 11 percent reported playing less, and 8 percent responded “not applicable”. Similar to TV watching, these results are more or less expected. The general idea is that students may play more games due to more free time, time at home, and/or to interact with friends and family.
+
+<br>
+
+#### Reading
+
+```{r}
+data %>% 
+  group_by(act_read) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_read, percent) %>% 
+  kable(col.names = c("Gaming", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Compared to before the COVID-19 outbreak, around 29 percent of respondents reported reading more, 57 percent reported reading about the same amount, 11 percent reported reading less, and 3 percent responded “not applicable”. The results are relatively consistent with expectations. Similar to games, the idea is that more time, especially, perhaps, on one’s own, may lead to increased reading. However, in certain cases, reading may also decrease due to reasons such as being an essential worker, having an increased course load, having more responsibilities at home, etc. 
+
+<br>
+
+#### Talking to People
+
+```{r}
+data %>% 
+  group_by(act_chat) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_chat, percent) %>% 
+  kable(col.names = c("Gaming", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Compared to before the COVID-19 outbreak, 60 percent of respondents reported interacting more with people through messaging, phone calls, or video chat, 27 percent reported interacting about the same amount, 12 percent reported interacting less, and 1 percent responded “not applicable”. These results are relatively unsurprising. With social distancing guidelines, many cannot see their friends and family physically, necessitating chatting and other remote interaction. As for those that reported less interaction, this could be due to less free time, mental health issues, lack of access to devices and/or stable internet, etc. 
+
+<br>
+
+---
+
+### Alcohol and Cannabis Consumption
+
+Our survey includes questions on alcohol, cannabis, and other drug consumption. The figures bellow shows the percentage of respondents that report more, about the same, or less consumption since the outbreak of COVID-19. We assume not applicable means the respondent did not consume alcohol or cannabis prior to the outbreak, or since.
+
+#### Alcohol consumption compared to before the COVID-19 outbreak
+
+```{r}
+data %>% 
+  group_by(act_alcohol) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_alcohol, percent) %>% 
+  kable(col.names = c("Alcohol consumption", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Around 20 percent of respondents reported consuming more alcohol, 22 percent reported consuming about the same amount, 28 percent reported consuming less, and 29 percent responded “not applicable”. Consuming more alcohol may be used to ease boredom and mental health issues. Reports of consuming less could be attributed to many students moving back home, the ban of social gatherings, increased difficulty in buying it, etc. 
+
+<br>
+
+#### Cannabis consumption compared to before the COVID-19 outbreak
+
+```{r}
+data %>% 
+  group_by(act_cannabis) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_cannabis, percent) %>% 
+  kable(col.names = c("Cannabis consumption", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Around 18 percent of respondents reported consuming more marijuana, 16 percent reported consuming about the same amount, 20 percent reported consuming less, and 47 percent responded “not applicable”. Similar to alcohol, an increase in marijuana consumption could point to increased boredom, mental health issues, stress, etc. Alternatively, a decline in consumption could be due to many of the same reasons suggested in the alcohol section (moving back home, loss of income, etc.). Furthermore, our results may be biased, in part due to the potential stigma surrounding marijuana consumption. This may lead respondents to fear reporting usage and/or increased usage. 
+
+<br>
+
+#### Changes in alcohol and cannabis use by age
+```{r}
+DrugConsumption_v_age_plot
+```
+
+The Figure above displays the difference in responses by age group. The figure shows that at least some of the reported changes are linked to age. Under-age respondents report higher percentages of Not Applicable (again we assume this means they are not using these substances) and less consumption. We also see higher percentages indicating the same amount of consumption and more consumption for our respondents of legal age to purchase these products. This supports the idea that it has been more difficult for people under the age of 21 to obtain alcohol and cannabis (illegally) since the outbreak. This effect appears larger for alcohol than cannabis. 
+
+
+<br>
+
+#### Other drug consumption compared to before the COVID-19 outbreak
+
+```{r}
+data %>% 
+  group_by(act_drugs) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(act_drugs, percent) %>% 
+  kable(col.names = c("Other Drug Usage", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+```
+
+Compared to before the COVID-19 outbreak, around 2 percent of respondents reported consuming more non-prescription drugs (excluding alcohol and marijuana), 18 percent reported consuming about the same amount, 16 percent reported consuming less, and 64 percent responded “not applicable”. As expected, most students report not taking non-prescription drugs. The minority that reports consuming more may be doing so to self-medicate and/or to ease boredom. Those consuming less could be having more difficulty purchasing non-prescription drugs (social distancing, moving location, loss of income, etc.). 
+
+---
+
+## Social Distancing
+
+### Life in the Time of Social Distancing 
+
+In this section we explore how the social life of our respondents has changed since the outbreak of COVID-19. The survey includes several questions about the respondents' social behavior and their attitudes toward social distancing and the stay at home order.
+
+---
+
+### Changes to Social Behavior 
+
+#### Social interactions
+
+```{r, fig.align= "Left"}
+Social_Interaction_Plot
+
+```
+
+
+The Figure above shows 59.6% of the respondents report using more messaging, phone calls, and video chat services, and 85.35% said that they visit their families or friends less often compared to before the outbreak. These results are unsurprising, considering the recent social distancing and stay-at-home order. It offers evidence that people have reduced physical contact with people as due to the stay-at-home order. However, this also shows the respondents are less exposed to quality social interaction, as people are forced to limit their physical social interaction with others, and virtual social interaction may not be a sufficient alternative. 
+
+<br>
+
+#### Entertainment
+```{r, fig.align= "Left"}
+SocialD_Entertainment_Plot
+```
+ 
+About 68% of respondents report playing more games and 47% report watching more TV and movies. These forms of entertainment likely serve as alternatives for other forms of entertainment that are not feasible due to the stay-at-home order. It also can be said that students have more spare time due to the stay-at-home order (because they save the commuting time due to the transition of online learning, etc.) so they might spend more time on games and TV shows respectively. 
+
+Unlike games and TV, most respondents (54.55%) spend the same amount of time on reading after the outbreak compared to before the outbreak. We assume that this is due to the fact that reading is not the most popular way to entertain themselves among the undergraduates’ age group. However, we could still see that more respondents (30.3%) reported spending more time on reading than those reporting to spend less time (11.62%). The mechanism behind this is presumably to be the same, as we discussed above.
+
+<br>
+
+#### Other changes in lifestyle and behaviors
+```{r, fig.align= "Left"}
+SocialD_OtherBehaviors_Plot
+```
+
+Similarly, we found most respondents (66.67%) visit the grocery stores less often. The discussion for social interaction seems to be fit for this topic as well. People try to avoid contact with humans as much as possible, so they choose to self-quarantine. Many apps in the markets (for example, Amazon Fresh and Instacart) allow people to order groceries delivered to the door. Therefore, it is not necessary to visit grocery stores to get what they need. 
+
+For food delivery or take out, the difference between "More often" (41.92%) and "Less often" (36.36%) is very small, and the percentage are both high. Since restaurants are not essential business and ordered to be closed, it makes sense that those who usually dine in are forced to choose takeout or food delivery. Consequently, they order takeout or food delivery more often. On the other hand, for those who report to order takeout or food delivery less often, the chances are that they have more spare time to cook for themselves; they might be too bored so they start learning how to cook during this outbreak(according to what our interviewee said). It is also possible that they return to their parents' house, so their parents cook for them, thus reducing their needs for takeout and food delivery. 
+
+The result for checking the news is very consistent with what we predicted. 47.47% of the respondents check the news more often, and we think it is very likely due to the evolving COVID-19 outbreak every day, and people have huge concerns about it. Again, it could be that people generally have more time to read the news during their self-quarantine. 
+
+---
+
+### Attitudes on Social Distancing
+
+#### Respondent Views on Social Distancing
+
+```{r, fig.align= "Left"}
+Views_Social_Distance_Plot
+
+```
+
+Most respondents agree that social distancing and stay-at-home order are necessary precautions and think that their response to COVID-19 has been appropriate. Interestingly, many of them do not have an opinion about whether people in their community are following these precautions or not. In all possibility the respondents stay at home most of the time so they do not have a clear picture of how they are doing because they do not see it.
+
+To test whether the respondents who believe to have appropriate responses are really following stay-at-home order, we managed to find if they attempt to avoid non-essential trips and maintain social distancing. Among those who think their response is proper, 88.51% of them report visiting families and friends less often; 68.39% report visiting grocery stores less often; 68.96% report visiting parks less often. Therefore, we assume that the majority of our respondents have had appropriate responses to the orders.
+
+
+----
+
+## Financial Changes
+
+### Financial and Employment Changes
+
+In this section we explore our survey questions that relate to employment and finances. We show the changes our respondents experienced in terms of employment, changes in the sources of funds used toward their education, and whether they experience difficulties paying for a set of items. 
+
+---
+
+### Employment changes
+
+#### Question: Were you employed at the time of the COVID-19 outbreak?
+
+```{r}
+data %>% 
+  group_by(employed_before) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(employed_before, percent) %>% 
+  kable(col.names = c("Prior Employment", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "float_right")
+
+```
+
+The outbreak of COVID-19 has caused significant disruptions in the economy and the labor market in particular. The Table X shows the breakdown of employment status in our sample prior to the outbreak. About half (47%) of the sample was not employed prior to the outbreak (4.6% of which started a new job since), 6.6% were employed full time, and 46.5% were employed part time. 
+
+<br>
+
+#### Question: How has your employment status changed since the COVID-19 outbreak?
+
+```{r}
+data %>% 
+  filter(employed_before != "No, I was not employed") %>% 
+  group_by(employ_chng) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(employ_chng, percent) %>% 
+  kable(col.names = c("Changes to Employment", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "left")
+
+
+```
+
+The survey also asks those respondents who were employed prior whether they experienced any changes in their employment since the outbreak. Of those employed prior to the outbreak, we find 16% were laid off, 7.6% quit, 21% are still technically employed but are not currently working, 22% are working fewer hours, 24% report no change in their hours, and 9.5% work more hours.  
+
+<br>
+
+#### Question: Since the COVID-19 outbreak, have you received unemployment insurance? 
+
+```{r}
+data %>% 
+  group_by(unem_insur) %>% 
+  tally() %>% 
+  mutate(percent= round(100*(n/sum(n)),2)) %>% 
+  select(unem_insur, percent) %>% 
+    kable(col.names = c("Recieved unemployment insurance", "Percent Of Respondent")) %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"),
+                full_width = F, font_size = 13, position = "left")
+
+
+```
+
+On the topic of unemployment insurance, 87 (47.0%) responded “No” for unemployment while only 9 (4.86%) responded “Yes”. 89 (48.1%) responded “NA”.
+
+----
+
+### Education Funding Source
+
+#### Reported changes in funding sources.
+
+```{r}
+funds %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "condensed"), 
+                full_width = F, font_size = 13, position = "float_right") 
+```
+
+Economic conditions, especially insecurity, related to the outbreak of COVID-19, the stay-at-home order, and social distancing have lively impacted students’ ability to fund their education. To get at this issue, the survey includes a series of questions on the sources from which respondents receive funding toward their education.
+
+The table to the right shows the perceived changes in respondents' education funding sources. The funding received from these sources can either decrease, increase, or remain the same. Respondents can also indicate funding source is not applicable, meaning it wasn't a source of funding either before or since the outbreak.
+
+The category with the greatest share reporting a decrease is personal income at `r funds %>% filter(f_source == "Personal Income") %>% pull(Decreased)`%. We imagine if the survey was administered at a later date the number of respondents reporting decreases in various funding might greater as the economic consequences of the crisis take effect. The category with the largest percentage of the sample reporting an increase is funding from the govenrment. This could be due to respondents receiving funds from the CARES Act (`r round(100*(nrow(data %>% filter(cares_act == "Yes"))/nrow(data)), 2)`%), unemployment insurance (`r round(100*(nrow(data %>% filter(unem_insur == "Yes"))/nrow(data)), 2)`%), or other 
+
+----
+
+### Difficulty Paying Expenses
+
+#### Changes In Difficulty Oaying For Essential Items
+
+```{r, fig.align = "Left"}
+Difficulty_Paying_Expenses_Plot
+
+```
+
+The Figure above shows participant responses for healthcare, groceries, transportation and rents/utilities. It’s encouraging to see the modal response in each case is “No change,” and no change accounts for the majority of responses in transportation, healthcare, and groceries. A large proportion of participants report no change in their ability to pay for healthcare, suggesting many respondents’ access to healthcare is relatively stable. We imagine many of these respondents receive healthcare through parents, an employer, their school, or a government program, which likely haven’t been affected (at least yet) by the outbreak and associated economic consequences. 
+
+Still, roughly ⅓ of respondents report more difficulty in paying for rent/utilities and groceries. Even healthcare is reported to be more difficult to access by about 18% of the sample. This reflects the increase in economic precarity we anticipated to find. It is interesting that more respondents reported transportation was less difficult to pay for than more difficult. However, this can probably be explained by (1) the stay at home order reducing the need for transportation altogether and (2) the historically low price of crude oil has led to remarkably low fuel prices. 
+Next we look to see whether these responses differ based on responses to other questions in our survey. To make this easier to view, instead of showing all four responses, the next three figures display the net change in difficulty (more difficult - less difficult) for each type of expense. We investigate whether first generation status, changes in employment, and changes in income influence the net change in difficulty for all four items. Given the unique nature of the transportation responses, we will mostly focus on the other three. 
+
+<br>
+
+#### Understanding How More Difficulty in Paying for Certain Expenses is affected by Changes in Personal Income
+
+```{r, fig.align = "Left"}
+Difficulty_By_IncomeChange
+```
+
+The figure above shows participants experincing more difficulty paying rent/utilities is associated with income changes in an expected way. The subset reporting a decrease in income has a much larger count than the other categories. This pattern seems to also appear in expense categories of Transportation and Groceries as well.
+
+Healthcare specifically is interesting because the subset reporting "No Change" in income since the outbreak shows the highest count with experincing difficulty in paying for this category. This implies respondents feel an increase in difficulty regardless of whether their income increased or decreased. This finding could relate to the fact that income, access to health care, and need for healthcare spending (i.e. whether the respondent happened to need medical attention or not) are not tightly connected. 
+
+<br>
+
+#### Understanding How More Difficulty in Paying for Certain Expenses is affected by Generation Status
+
+```{r, fig.align = "Left"}
+Difficulty_By_Generation
+```
+
+The Figure above shows participants who experince more difficulty in paying for these four categories, stratified by first generation status. First generation participants have experinced more difficulty than their counterparts in the expense category of Rent and Utilities. Assuming first generation status is a reasonable proxy for SES, this suggests lower SES is associated with more difficulty paying for rent/utilities. For the three other expenses, both first generation students and non-first generation students within the subset of participants who experince more difficulty seem to be about the same.  
+
+---
+
