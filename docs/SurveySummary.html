@@ -1,0 +1,4037 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>College Student Life During the COVID-19 Outbreak</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="SurveySummary.html">Research</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">College Student Life During the COVID-19 Outbreak</h1>
+
+</div>
+
+
+<div id="section" class="section level1 tabset">
+<h1></h1>
+<div id="home" class="section level2">
+<h2>Home</h2>
+<div id="spring-2020-sociology-403-research-practicum-appendix" class="section level3">
+<h3>Spring 2020 Sociology 403 Research Practicum Appendix</h3>
+<hr />
+</div>
+<div id="table-of-contents" class="section level3">
+<h3>Table Of Contents</h3>
+<ol style="list-style-type: decimal">
+<li>Research Overview</li>
+<li>Background Information and Demographics</li>
+<li>Housing Related Questions</li>
+<li>Online Learning During The Outbreak</li>
+<li>Changes in Post-graduation Plans</li>
+<li>Changes in Physical and Mental Health</li>
+<li>Life in the Time of Social Distancing</li>
+<li>Financial and Employment Changes</li>
+</ol>
+</div>
+<div id="research-team" class="section level3">
+<h3>Research Team</h3>
+<p><strong>Instructor:</strong><br />
+Steven M. Karceski</p>
+<p><strong>Students:</strong><br />
+Nathan Abei, Bezawit Belete, Alex Chan, Kevin Daugard, Jessica Edge,<br />
+Kenton Ho, Neil Kato, Xiaoran Liu, Allan Louie, Yasmin Solano, Colin Yao</p>
+</div>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<div id="research-overview" class="section level3">
+<h3>Research Overview</h3>
+<p>On March 6, only weeks before the start of the Spring quarter, the University of Washington suspended in-person instruction due to the outbreak of COVID-19. The spring 2020 quarter has been conducted entirely online, including our class. Typically, SOC 403 classes decide on a research topic with the help of our friends at the City of Seattle. Past classes have studied a variety of issues, most recently how undergraduate students are impacted by labor and housing policies.</p>
+<p>This quarter we studied how undergraduate students are dealing with the changes related to COVID-19. We believe our research is important because students will likely experience the crisis in a way that is unique from other groups. Undergraduate students are at a formative stage of life where they learn important skills to enter the labor market, (often) learn how to live on their own, and make social ties that provide benefits long into the future. College experiences teach students how to act in various social and professional contexts, socializing them in adult life. Disruption of and changes to these processes may have long-term consequences, so understanding the changes experienced by students is key.</p>
+</div>
+<div id="data-collection" class="section level3">
+<h3>Data Collection</h3>
+<p>To investigate how undergraduate students are dealing with the changes associated with the outbreak of COVID-19 and the transition to online learning we collected data with a survey and follow-up interviews.</p>
+</div>
+<div id="survey" class="section level3">
+<h3>Survey</h3>
+<p>In order to determine the impact of COVID-19 on undergraduate students in Washington State, we used a survey with the option of follow-up interviews. We created the survey with Google Forms. Our survey focuses on four main areas: (1) online learning experience; (2) graduation and post-graduation plans; (3) social, physical, and mental health, and (4) economic and financial characteristics. Given the large amount of overlap and connection between certain topics, using four main themes will provide the most detailed and straightforward description of our findings.</p>
+<p>Due to the current “Stay Home, Stay Healthy” order in Washington State, we were limited in our means to promote participation. Promotional methods proven to be effective in the past were not an option, such as passing out flyers around campus, administering the survey in-person with iPads (also on campus), and posting flyers on and off campus</p>
+<p>The constraints related to quarantine and online learning meant we primarily relied on social media and our personal networks. We created digital advertisements to circulate around social media, among our friends, and to instructors and professors. These platforms include Twitter, Instagram, Facebook, and Tinder – the latter not working nearly as well as the others.</p>
+</div>
+<div id="our-survey-sample" class="section level3">
+<h3>Our Survey Sample</h3>
+<p>Our survey went live on <strong>May 7, 2020</strong> and was closed on <strong>May 27, 2020</strong>. The survey was up for 20 days and garnered a total of 198 responses. Out of the 198 responses roughly ¾ (73%) attended one of the three University of Washington campuses, which, again, is likely the result of primarily distributing our survey through our own social networks.</p>
+</div>
+</div>
+<div id="background-information-and-demographics" class="section level2">
+<h2>Background Information and Demographics</h2>
+<div id="section1" class="section level3">
+<h3>Background Information and Demographics</h3>
+<p>This section shows the demographic makeup of our survey participants, as well as some other general information about our sample.</p>
+<hr />
+</div>
+<div id="age" class="section level3">
+<h3>Age</h3>
+<div id="question-how-old-are-you" class="section level4">
+<h4>Question: &quot;How old are you?&quot;</h4>
+<p>The plot below shows the age distribution among our respondents.</p>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<ul>
+<li>The mean age is 21.11 years old</li>
+<li>The median age is 21</li>
+<li>The oldest respondent is 37</li>
+<li>The youngest is 18</li>
+</ul>
+<p>These statistics show our sample is made up of mostly traditional college age students. There are of course exceptions; 22 of 198 total respondents are over the age of 22, or 11.11 percent of the sample.</p>
+<hr />
+</div>
+</div>
+<div id="racial-groups" class="section level3">
+<h3>Racial Groups</h3>
+<div id="question-how-do-you-primarily-identify" class="section level4">
+<h4>Question: &quot;How do you primarily identify?&quot;</h4>
+<p>The table bellow sorts the race categories from most-represented in our sample to the least represented.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Racial Group
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+45.96
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Asian
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+26.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Two or more races
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+11.11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Black or African American
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+7.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+6.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prefer not to say
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Native Hawaiian or other Pacific islander
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can see the vast majority of responses fall into the White and Asian categories. Given this, we probably won't have enough observations from the other groups to be able to make any claims about associations with those identities. An alternative way of describing the race quesiton is to create dummy variables for White, Asian, and Other.</p>
+<p>We also might want to use an alternative variable for race that only takes one of the three categories white, asian, or other. (This is different from dummy variables since dummies are each their own variable. The new race variable, called <code>race_3</code>, is one variable that takes one of three vales.) The table below summarizes the new three-category race variable.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Racial Group
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+45.96
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Asian
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+26.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+27.27
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+</div>
+<div id="ethnicity" class="section level3">
+<h3>Ethnicity</h3>
+<div id="question-do-you-identify-as-hispanic-or-latinx" class="section level4">
+<h4>Question: &quot;Do you identify as Hispanic or Latinx?&quot;</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Hispanic/Latinx
+</th>
+<th style="text-align:right;">
+count
+</th>
+<th style="text-align:right;">
+percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+176
+</td>
+<td style="text-align:right;">
+88.89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+11.11
+</td>
+</tr>
+</tbody>
+</table>
+<p>In the style of the US Census, we keep race and ethnicity as separate questions. This means people can pick any race and in addition identify as Hispanic/Latinx, or not. The table to the right shows that 11.11 percent of the sample identifies as Hispanic or Latinx.</p>
+<p>The plot below shows the racial composition of our sample and breaks down each racial category according to its Hispanic/Latinx composition.</p>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>This shows that most of the respondents who identify as Hispanic or Latinx categorized themselves into the &quot;Other&quot; race category and a much smaller amount in &quot;White&quot; (there were no Asian and Hispanic/Latinx respondents). It also shows that a significant proportion of the &quot;Other&quot; category is made up of respondents identifying as Hispanic or Latinx.</p>
+<hr />
+</div>
+</div>
+<div id="gender" class="section level3">
+<h3>Gender</h3>
+<div id="question-what-is-your-gender-identity" class="section level4">
+<h4>Question: &quot;What is your gender identity?&quot;</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gender Identity
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Woman
+</td>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:right;">
+56.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Man
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+38.89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Non-binary
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prefer not to say
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>The majority of our respondents identified as female with about 55%. About 40% identified as male. We believed that this was the result of the female willingness to participate in our study. We also noticed that the majority of our interviewees identified as female. There is also a higher population of females attending college in the state of Washington.</p>
+<hr />
+</div>
+</div>
+<div id="first-generation" class="section level3">
+<h3>First Generation</h3>
+<div id="question-have-either-of-your-parents-completed-a-four-year-college-degree" class="section level4">
+<h4>Question: &quot;Have either of your parents completed a four-year college degree?&quot;</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+First Generation
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+126
+</td>
+<td style="text-align:right;">
+63.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+36.36
+</td>
+</tr>
+</tbody>
+</table>
+<p>Our question about parents education (whether either received a four-year degree) is one of the best measures of social and economic status (SES) we have in our survey. Since our survey question asks whether either parent completed a bachelor's degree, we create a new variable called <code>first_gen</code> that shows whether the respondent would be the first in their family to complete a four-year degree. So if the question response was no, then the new variable takes the value <code>&quot;Yes&quot;</code>. The table to the right summarizes the new variable.</p>
+<p>The figure below shows the racial makeup of the new variable. This plot uses the &quot;fill&quot; setting to show the proportion of each response (first gen or not) represented by the three racial categories.</p>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>This shows that the group of first generation students is slightly less white, much less Asian, and much more &quot;Other&quot; than the non-first generation group.</p>
+<hr />
+</div>
+</div>
+<div id="residency-status" class="section level3">
+<h3>Residency Status</h3>
+<div id="question-what-is-your-residency-status" class="section level4">
+<h4>Question: &quot;What is your residency status?&quot;</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Residency Status
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+US Citizen
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+84.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+International student
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+8.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+US Permanent Resident
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+4.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Undocumented/DACA
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prefer not to say
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>This the table to the right shows a large majority of respondents are US Citizens, followed by a much smaller proportion of respondents falling into categories for International Students, US Permanent Residents, and Undocumented/DACA. It's possible that undocumented/DACA recipients are less willing to take a survey or if they do less likely to report their status.</p>
+<p>We can also do a race breakdown of the different residency statuses. The plot below shows the responses to the residency question broken out by the three-category race variable.</p>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>This shows the majority of International Students identify as Asian, undocumented/DACA as &quot;Other&quot;, and US Permanent Resident as &quot;other&quot;. Within the US Citizen category we see a majority of respondents identifying as white, but a good number identifying as Asian and Other as well.</p>
+<hr />
+</div>
+</div>
+<div id="politcal-ideology" class="section level3">
+<h3>Politcal Ideology</h3>
+<div id="question-please-indicate-your-political-preferences-on-a-range-of-very-liberal-1-to-very-conservative-7" class="section level4">
+<h4>Question: &quot;Please indicate your political preferences on a range of very liberal (1) to very conservative (7)?&quot;</h4>
+<p>We modified this variable by subtracting 4 from the seven-point scale, making the center value (4) take a value of zero. We call this new variable <code>ideology</code>.</p>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<ul>
+<li>The mean ideology is -1.32</li>
+<li>The median ideology is -2</li>
+<li>2 respondents identify as 'very conservative'</li>
+<li>42 respondents identify as 'very liberal'</li>
+</ul>
+<p><br></p>
+</div>
+<div id="question-what-are-the-politcal-preferences-across-differnt-grades" class="section level4">
+<h4>Question: What are the politcal preferences across differnt grades?</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>As students progressed through their undergraduate education, they became more and more liberal and less conservative with no 5th year students identifying on the conservative side of our spectrum. This is consistent with the trend of education leading to more liberal views. Studies have shown that individuals with a college degree will be significantly more conservative than those with only a high school diploma.</p>
+<hr />
+</div>
+</div>
+<div id="school" class="section level3">
+<h3>School</h3>
+<div id="question-in-what-university-or-college-are-you-currently-enrolled" class="section level4">
+<h4>Question: In what university or college are you currently enrolled?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+School
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+uw (nonspecified)
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+50.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+uw seattle
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+20.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wwu
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+gonzaga university
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+6.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+highline community college
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bellevue college
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+uw tacoma
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wsu
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+central washington university
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+everett community college
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+university of puget sound
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+uw bothell
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+edmonds (community) college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+north seattle community college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+seattle university
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shoreline community college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+south seattle college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+whatcom community college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+whitman college
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>For this question, respondents were allowed to write in their responses. This means the responses for one school (like University of Washington) could be written in more than one way (UW, university of washington, UW-Seattle, etc.). To deal with this, we changed all responses to lower case text (to prevent mismatch based on case-sensitivity) and grouped responses together according to rules we created. For example, responses that include the text <code>washington</code> and <code>seattle</code> were recoded as <code>uw seattle</code>. We did this to the best of our ability to match the appropriate responses together. We condensed the current responses to 19 schools (this was done separately in the &quot;data_download.R&quot; script). The unique schools in our sample are displayed in the table to the right.</p>
+<p>At this point we have a very large proportion of our sample attending University of Washington in Seattle and University of Washington without a specified campus. It's probably safe to assume the respondents mean the main Seattle campus, but for now we won't make that assumption. Right now, only 50.51 percent of the indicated they currently attend a school that is not in the top two categories.</p>
+<hr />
+</div>
+</div>
+<div id="major" class="section level3">
+<h3>Major</h3>
+<div id="quesiton-what-is-your-major" class="section level4">
+<h4>Quesiton: What is your major?</h4>
+<p>The <code>major</code> question has issues similar to the <code>school</code> variable. However, it's probably <em>not</em> worth grouping all the majors together since the high number of unique responses (108 in total) is not due to mis-categorization, but because there actually are a lot of different majors in the sample. In other words, even if did take the time to adjust the responses, there probably wouldn't be enough responses in <em>any</em> major to allow us to make any strong claims about any of them.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Major
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+psychology
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+9.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nursing
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+5.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+biology
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+4.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sociology
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+4.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+computer science
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+business
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+economics
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+political science
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+biochemistry
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+engineering undeclared
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, unless we can come up with a good reason to do otherwise, we're going to leave the major catagories as they were written in. The table below shows the ten most common write-in majors in our sample.</p>
+<hr />
+</div>
+</div>
+<div id="other-background-related-questions" class="section level3">
+<h3>Other Background Related Questions</h3>
+<div id="credible-information" class="section level4">
+<h4>Credible Information</h4>
+<div id="question-do-you-view-the-following-institutions-as-credible-sources-of-information-on-the-covid-19-crisis-mainstream-national-news" class="section level5">
+<h5>Question: Do you view the following institutions as credible sources of information on the COVID-19 crisis? [Mainstream national news]</h5>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="3">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Government
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Response
+</th>
+<th style="text-align:right;">
+National News
+</th>
+<th style="text-align:right;">
+Local News
+</th>
+<th style="text-align:right;">
+City
+</th>
+<th style="text-align:right;">
+State
+</th>
+<th style="text-align:right;">
+Federal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+21.21
+</td>
+<td style="text-align:right;">
+39.90
+</td>
+<td style="text-align:right;">
+60.10
+</td>
+<td style="text-align:right;">
+60.61
+</td>
+<td style="text-align:right;">
+25.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+It depends
+</td>
+<td style="text-align:right;">
+62.63
+</td>
+<td style="text-align:right;">
+47.98
+</td>
+<td style="text-align:right;">
+34.34
+</td>
+<td style="text-align:right;">
+33.84
+</td>
+<td style="text-align:right;">
+45.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+12.63
+</td>
+<td style="text-align:right;">
+7.07
+</td>
+<td style="text-align:right;">
+3.03
+</td>
+<td style="text-align:right;">
+3.03
+</td>
+<td style="text-align:right;">
+28.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unsure/not applicable
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+<td style="text-align:right;">
+5.05
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Net Credibility
+</td>
+<td style="text-align:right;">
+8.58
+</td>
+<td style="text-align:right;">
+32.83
+</td>
+<td style="text-align:right;">
+57.07
+</td>
+<td style="text-align:right;">
+57.58
+</td>
+<td style="text-align:right;">
+-3.45
+</td>
+</tr>
+</tbody>
+</table>
+<p>The figure to the right summarizes the responses to a series of questions on the perceived credibility of various institutions: national news, local news, and city, state, and federal governments. Respondents can mark Yes, No, It depends, and Unsure/not applicable. The perceived credibility of listed institutions vary significantly. Local news is viewed as more credible than the national news. State and city governments are viewed as credible by far more respondents than those who view the federal government as credible. In fact, the only institution with a negative net credibility rating is the federal government (the 6 respondents who left the country were excluded from this calculation).</p>
+<p><br></p>
+</div>
+</div>
+<div id="news-source" class="section level4">
+<h4>News source</h4>
+<div id="question-where-do-you-go-to-get-covid-19-related-news-check-all-that-apply" class="section level5">
+<h5>Question: Where do you go to get COVID-19-related news? (Check all that apply)</h5>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Information Source
+</th>
+<th style="text-align:right;">
+Percent of sample
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Social Media
+</td>
+<td style="text-align:right;">
+72.22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Government
+</td>
+<td style="text-align:right;">
+56.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National TV
+</td>
+<td style="text-align:right;">
+51.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Friends
+</td>
+<td style="text-align:right;">
+51.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Newspapers
+</td>
+<td style="text-align:right;">
+50.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Family
+</td>
+<td style="text-align:right;">
+50.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Local TV
+</td>
+<td style="text-align:right;">
+37.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other Sources
+</td>
+<td style="text-align:right;">
+19.19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Workplace
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+</tbody>
+</table>
+<p>The table to the right displays the percentage of respondents that report getting their COVID-19 related news from the listed sources. National TV includes major networks and major cable news sources; government includes state, local, federal government sources as well as government organizations like the Center for Disease Control; newspapers include national and local newspapers; and &quot;Other sources&quot; includes podcasts, blogs, forums, and news aggregators (such as Reddit).</p>
+<p>The table shows the most popular source is social media at 72.22%, followed by the government at 56.06%. Roughly half the sample receives information from government sources, family, friends, newspapers, and national TV. Local TV and other sources were significantly lower than 50% of the sample. Finally, two respondents wrote in &quot;work&quot; to indicate they receive information from their employer or fellow employees.</p>
+<p>This is something the City might be interested in. A lot of students are getting their information from social media like Facebook, Instagram, Twitter, etc. The City of Seattle could consider disseminating information via social media, since it appears it might be particularly effective at reaching undergraduate students.</p>
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="housing" class="section level2">
+<h2>Housing</h2>
+<div id="housing-related-questions" class="section level3">
+<h3>Housing Related Questions</h3>
+<p>This section takes a look at our survey questions related to housing before the outbreak and any changes that may have occured since the outbreak of COVID-19.</p>
+<hr />
+</div>
+<div id="secure-housing-before-the-outbreak" class="section level3">
+<h3>Secure housing before the outbreak</h3>
+<div id="question-according-to-the-definition-above-was-your-housing-situation-secure-before-the-covid-19-outbreak" class="section level4">
+<h4>Question: According to the definition above, was your housing situation secure BEFORE the COVID-19 outbreak?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Secure Housing Before
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+197
+</td>
+<td style="text-align:right;">
+99.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>Not many respondents were living in 'insecure' housing conditions prior to the outbreak; currently only 1. We shouldn't assume this means there are approximately 0.51 percent of undergraduate students living in such conditions. In fact, this very low number may be due to a selection bias that is the result of being limited to online methods of recruiting participants. And even if it is accurate that 0.51 percent of undergraduate students in WA state live in these conditions, this still means that at a school the size of UW there are approximately 157 students living in 'insecure' housing conditions.</p>
+<hr />
+</div>
+</div>
+<div id="housing-type" class="section level3">
+<h3>Housing type</h3>
+<p>The following two questions were asked to respondents regarding their housing situation before and after the outbreak of COVID-19. The quesiton asked prior to the outbreak was asked to everyone who indicated they live in 'secure' (more on this below) housing, while the second was asked only to respondents indicating (1) they experienced a change in housing since the outbreak of the virus <strong>and</strong> (2) they currently live in 'secure' housing conditions.</p>
+<ul>
+<li><strong>Prior to the outbreak</strong>: Which option most accurately describes your housing situation BEFORE the COVID-19 outbreak?</li>
+<li><strong>After to the outbreak/current housing</strong>: Identify which option most accurately describes your CURRENT housing situation.</li>
+</ul>
+<p>But these two questions leave out respondents who live in 'insecure' housing; these respondents given an <code>NA</code> for each of these questions. So to get a table with the before and after housing charactertics we have to manually add in the 'insecure' respondents (both before and after the outbreak). The code for creating these variables can be viewed in the .Rmd file and in the &quot;data_download.R&quot; script.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Percentage of Sample
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Since Outbreak
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Housing Type
+</th>
+<th style="text-align:right;">
+Before
+</th>
+<th style="text-align:right;">
+After
+</th>
+<th style="text-align:right;">
+PP Change
+</th>
+<th style="text-align:right;">
+A/B Ratio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Parents/guardians
+</td>
+<td style="text-align:right;">
+21.21
+</td>
+<td style="text-align:right;">
+59.09
+</td>
+<td style="text-align:right;">
+37.88
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Insecure
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+1.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Greek
+</td>
+<td style="text-align:right;">
+4.55
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+-3.54
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Off-campus
+</td>
+<td style="text-align:right;">
+48.48
+</td>
+<td style="text-align:right;">
+33.84
+</td>
+<td style="text-align:right;">
+-14.64
+</td>
+<td style="text-align:right;">
+0.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+On-campus
+</td>
+<td style="text-align:right;">
+25.25
+</td>
+<td style="text-align:right;">
+5.05
+</td>
+<td style="text-align:right;">
+-20.20
+</td>
+<td style="text-align:right;">
+0.20
+</td>
+</tr>
+</tbody>
+</table>
+<p>The first column of the table shows the housing type. The second and third columns show the percentage of the sample that fall into each of the housing categories before and after the outbreak of COVID-19. The last two columns show (1) the percentage point (PP) change from before to after and (2) the ration of respondents falling into each catagory after over before (after/before). The PP change reflects the change in terms of percentage of the total sample. The ratio shows the 'after' value in terms of the 'before' value. So a category representing 5% of the sample before that increases to 10% after has a PP Change of 5% but a A/B Ratio of 2.0 (in other words, the number of respondents in the category doubled). If the ratio is greater than one it means the count in that category increased and if it is less than one (it cannot be negative) it means the count in the category decreased.</p>
+<p>The table is sorted to show the largest positive PP Change at the top. We can see the largest PP change was for Parents/Guardians, meaning a lot of respondents moved in with parents/guardians. The ratio suggests the number of respondents from before to after almost tripled. The number of people living in insecure housing conditions also shows a very high ratio, but the starting number is much smaller, meanin the numbe rof people moving into that category wasn't that big when viewed as a percentage of the sample. We see a moderate decrease among people living off-campus and a very large decrease among respondents living on-campus. This makes sense, since we know a lot of people were required to move out of dorms.</p>
+<hr />
+</div>
+<div id="roommates-internet-and-computers" class="section level3">
+<h3>Roommates, internet, and computers</h3>
+<p>Like the table on housing above, the next three tables show the percentage of resppondents that fall into each category before and after the outbreak, as well as the percenatage point change and the after/before ratio. The first is the number of people the respondent lives with, followed by access to internet and access to a computer.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Percentage of Sample
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Since Outbreak
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Roommates
+</th>
+<th style="text-align:right;">
+Before
+</th>
+<th style="text-align:right;">
+After
+</th>
+<th style="text-align:right;">
+PP Change
+</th>
+<th style="text-align:right;">
+A/B Ratio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Two or more
+</td>
+<td style="text-align:right;">
+65.66
+</td>
+<td style="text-align:right;">
+76.77
+</td>
+<td style="text-align:right;">
+11.11
+</td>
+<td style="text-align:right;">
+1.17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Insecure Housing
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+2.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Living Alone
+</td>
+<td style="text-align:right;">
+9.09
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+<td style="text-align:right;">
+-1.51
+</td>
+<td style="text-align:right;">
+0.83
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+One other person
+</td>
+<td style="text-align:right;">
+24.75
+</td>
+<td style="text-align:right;">
+14.14
+</td>
+<td style="text-align:right;">
+-10.61
+</td>
+<td style="text-align:right;">
+0.57
+</td>
+</tr>
+</tbody>
+</table>
+<p>The largeest increase can be seen among people living with 2 or more people, the changes are low in the insecure and living alone categories, and there's a large decrease in people living with one other person. This makes sense as people move back home or in with other friends/family to save money or because they were required to leave dorms.</p>
+<p>Overall, respondents are on average living with more people than before the outbreak. We can't measure this exactly because we didn't ask for a specific number of roommates beyond two, but we see there is a decrease in the number of people living alone and with one other person, and an increase in those living with two or more other people. There's also an increase in insecure housing, but we know from their responses that they primarily sleep at their friends, meaning they are living at least with one other person.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Percentage of Sample
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Since Outbreak
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Internet Access
+</th>
+<th style="text-align:right;">
+Before
+</th>
+<th style="text-align:right;">
+After
+</th>
+<th style="text-align:right;">
+PP Change
+</th>
+<th style="text-align:right;">
+A/B Ratio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Unreliable, unstable, or slow
+</td>
+<td style="text-align:right;">
+6.06
+</td>
+<td style="text-align:right;">
+13.64
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+<td style="text-align:right;">
+2.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No access
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stable and reliable
+</td>
+<td style="text-align:right;">
+92.93
+</td>
+<td style="text-align:right;">
+85.35
+</td>
+<td style="text-align:right;">
+-7.58
+</td>
+<td style="text-align:right;">
+0.92
+</td>
+</tr>
+</tbody>
+</table>
+<p>Next is internet access. The table to the right shows the same same figures: before, after, PP change, and A/B ratio. The table doesn't show any dramatic changes, but the changes are in the direction we would expect. People with unreliable internet access increased with a moderate PP change (the percentage change in terms of the percentage of the sample) and a large A/B Ratio, meaning the number of respondents reporting unreliable internet access doubled since the outbreak. The number of people without any access to the internet did not change since the outbreak, and they represent a small proportion of the sample.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Percentage of Sample
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Since Outbreak
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Computer Access
+</th>
+<th style="text-align:right;">
+Before
+</th>
+<th style="text-align:right;">
+After
+</th>
+<th style="text-align:right;">
+PP Change
+</th>
+<th style="text-align:right;">
+A/B Ratio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Shared/occasional access
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+<td style="text-align:right;">
+3.03
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+1.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exclusive/reliable access
+</td>
+<td style="text-align:right;">
+97.98
+</td>
+<td style="text-align:right;">
+96.97
+</td>
+<td style="text-align:right;">
+-1.01
+</td>
+<td style="text-align:right;">
+0.99
+</td>
+</tr>
+</tbody>
+</table>
+<p>The next table (to the right) shows access the before and after access to a computer reported by our respondents. We only see a small change, with slightly more respondents reporting having to share a computer or having occasional access (for those living in insecure housing). On the one hand, taken together with the low percentage of respondents not having internet access, this may be a good sign that the vast majority of students were well-equipped for the transition to online learning. On the other hand, it may reflect a sampling bias that results from promoting a survey solely online -- those without computers are less likely to encounter the survey.</p>
+<hr />
+</div>
+<div id="change-in-housing" class="section level3">
+<h3>Change in housing</h3>
+<div id="question-since-the-covid-19-outbreak-has-your-housing-situation-changed" class="section level4">
+<h4>Question: Since the COVID-19 outbreak, has your housing situation changed?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Change in Housing? (%)
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Housing Type
+</th>
+<th style="text-align:right;">
+No
+</th>
+<th style="text-align:right;">
+Yes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Greek
+</td>
+<td style="text-align:right;">
+22.22
+</td>
+<td style="text-align:right;">
+77.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Insecure
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+100.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Off-campus
+</td>
+<td style="text-align:right;">
+59.38
+</td>
+<td style="text-align:right;">
+40.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+On-campus
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+84.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Parents/guardians
+</td>
+<td style="text-align:right;">
+90.48
+</td>
+<td style="text-align:right;">
+9.52
+</td>
+</tr>
+</tbody>
+</table>
+<p>The table to the above shows the proportion from each housing type (prior to the outbreak) that experienced a housing change. The rates vary dramatically across housing types. This makes sense, as many students in fraternities/sororities and in on-campus housing (like dorms) were required to vacant their place of residence. On the other hand, students living with parents/guardians and living off-campus were much less likely to report a housing change since the outbreak.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Changed-Housing Subset
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Change Type
+</th>
+<th style="text-align:right;">
+% of Subset
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Moved back home
+</td>
+<td style="text-align:right;">
+49.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Left on-campus housing
+</td>
+<td style="text-align:right;">
+41.94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Left greek housing
+</td>
+<td style="text-align:right;">
+7.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More roommates
+</td>
+<td style="text-align:right;">
+31.18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fewer roommates
+</td>
+<td style="text-align:right;">
+5.38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+From secure to insecure
+</td>
+<td style="text-align:right;">
+2.15
+</td>
+</tr>
+</tbody>
+</table>
+<p>The first three items in the table to the right shed light on the reasons for the reported change in housing. Almost one half (49.46%) of the subset moved in with parents or guardians. A large percentage of the subset left on-campus housing (41.94%) and smaller left greek housing (7.53%).</p>
+<p>The fourth and fifth items reflect changes in the number of people respondents lived with. These variables are conservative underestimates of the actual changes; if people indicated they live with two or more people before and after the outbreak, we have no way of knowing if there was a change, even if they live with more or fewer people since the outbreak. Even with these imperfect estimates, we can see significant changes in living arrangements. Of those reporting a change in housing, 31.18% report living with more people and 5.38% reporting living with fewer people.</p>
+<p>Finally, the table shows that 2.15% of the subset moved from secure housing to insecure housing.</p>
+<hr />
+</div>
+</div>
+<div id="insecure-housing" class="section level3">
+<h3>Insecure Housing</h3>
+<p>We don't have many responents who reported living in insecure housing conditions. In the survey, we define insecure housing as the following:</p>
+<blockquote>
+<p>When we say &quot;secure&quot; housing, we mean either (1) having a stable place of residence in a dorm, apartment, or house, or (2) living with parents, guardians, or other family/friends. Not having &quot;secure&quot; housing includes experiencing homelessness as well as temporary housing in shelters, with friends, emergency accommodations, or boarding houses.</p>
+</blockquote>
+<p>We don't have a lot of people reporting to live in 'insecure' conditions. In total, we have only 3 observations that fall into 'insecure' housing conditions either before the outbreak or currently.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Secure Housing
+</div>
+</th>
+<th style="border-bottom:hidden" colspan="5">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Before
+</th>
+<th style="text-align:left;">
+Current
+</th>
+<th style="text-align:left;">
+Gender
+</th>
+<th style="text-align:left;">
+Race
+</th>
+<th style="text-align:left;">
+First Gen.
+</th>
+<th style="text-align:left;">
+Residency
+</th>
+<th style="text-align:left;">
+School
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+Woman
+</td>
+<td style="text-align:left;">
+Asian
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+International student
+</td>
+<td style="text-align:left;">
+uw (nonspecified)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+Woman
+</td>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+US Citizen
+</td>
+<td style="text-align:left;">
+seattle university
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+Man
+</td>
+<td style="text-align:left;">
+Black or African American
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+US Permanent Resident
+</td>
+<td style="text-align:left;">
+highline community college
+</td>
+</tr>
+</tbody>
+</table>
+<p>The one thing that sticks out is first generation status. First generation students make up NA% of the total sample but NA% of those living in insecure housing conditions.</p>
+<p>The table below shows living situations of the 3 respondents pior to (we already know 1 of them was in insecure housing prior to the outbreak) and since the COVID-19 outbreak.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Before Outbreak
+</th>
+<th style="text-align:left;">
+Situation Before
+</th>
+<th style="text-align:left;">
+Current Situation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+I slept on friends' spare beds, couches, or floors
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+On-campus housing
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+I've slept on friends' spare beds, couches, or floors
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Off-campus housing (not with parents/guardians)
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+I often go one or more nights without my own bed
+</td>
+</tr>
+</tbody>
+</table>
+<p>Below are a few observations on the inscure subset. Of the 3 respondents in the subset:</p>
+<ul>
+<li>1 lived in on-campus housing prior to the outbreak</li>
+<li>2 lived reported living at a friends place sleeping on a floor, spare bed, or couch</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="online-education" class="section level2">
+<h2>Online Education</h2>
+<div id="online-learning-during-the-outbreak" class="section level3">
+<h3>Online Learning During The Outbreak</h3>
+<p>This section explores the experience of college online learning. Here we assess our survey questions on experiences with the transition to online learning and education under the conditions of the COVID-19 crisis. Our questions are split into a few general categories: course changes, accessibility of reliable technology and internet required for online learning, accessibility of school resources, and the effectiveness of online learning.</p>
+<hr />
+</div>
+<div id="background-information-related-to-online-learning" class="section level3">
+<h3>Background Information Related To Online Learning</h3>
+<div id="question-were-any-of-your-courses-canceled-due-to-the-transition-to-online-learning" class="section level4">
+<h4>Question: Were any of your courses canceled due to the transition to online learning?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+cancelled_course
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+158
+</td>
+<td style="text-align:right;">
+79.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+20.2
+</td>
+</tr>
+</tbody>
+</table>
+<p>Around 20% of respondents reported having a class cancelled. Potential reasons for this could include: inability to perform certain essential class activities (ex. Labs, fieldwork) and/or diminished class registration (ex. Taking time off, dropped out, changing schedule due to COVID-19, etc.). Furthermore, it is difficult to determine if this figure is close to accurate, given bias in the sample that may include more people in certain majors (some majors may have coursework that has disproportionately been disrupted by the transition to online learning), etc.</p>
+<p><br></p>
+</div>
+<div id="question-did-you-voluntarily-make-any-changes-to-your-schedule-due-to-the-covid-19-outbreak-and-transition-to-online-learning" class="section level4">
+<h4>Question: Did you voluntarily make any changes to your schedule due to the COVID-19 outbreak and transition to online learning?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Voluntary Changes
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+102
+</td>
+<td style="text-align:right;">
+51.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:right;">
+48.5
+</td>
+</tr>
+</tbody>
+</table>
+<p>Around 50 percent of respondents reported voluntarily changing their schedule due to the COVID-19 outbreak. A decent portion of the class changes may be due to limitations of certain classes under online learning (ex. Labs, fieldwork). Another potential reason for a voluntary change could be due to adding courses. This could especially be true for those with increased amounts of time for studying due to COVID-19 and social distancing guidelines, which may lead to students taking a larger course load than they otherwise would have.</p>
+<p><br></p>
+</div>
+<div id="question-is-your-technology-access-limiting-your-online-education-experience-i.e.-old-devices-slow-computer-device-unexpectedly-crashfreeze" class="section level4">
+<h4>Question: Is your technology access limiting your online education experience? (i.e. old devices, slow computer, device unexpectedly crash/freeze )</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Slow Technology
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Always
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Never
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+16.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Often
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+10.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rarely
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+43.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sometimes
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+27.3
+</td>
+</tr>
+</tbody>
+</table>
+<p>A majority of respondents reported either rarely (43.4%) or never (16.2%) experiencing slow technology. In contrast, 27.3% sometimes experiences slow tech, 10.1% often does, and 3.03% always does. Experiencing slow technology may be due to a decreased access to school technology resources (repair, rentals, computer labs, etc.). Furthermore, it’s important to note that our results may under represent the amount of students frequently experiencing slow tech. In order to take this survey, respondents must use a tech device (phone, laptop, etc.). If they have slow tech, they may not be able to and/or may have increased difficulty in taking the exam.</p>
+<p><br></p>
+</div>
+<div id="question-which-type-of-devices-do-you-currently-use-for-online-course-work-check-all-that-apply" class="section level4">
+<h4>Question: Which type of devices do you currently use for online course work? (Check all that apply)</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Device Type
+</th>
+<th style="text-align:right;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Laptop Computer
+</td>
+<td style="text-align:right;">
+94.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Smart Phone
+</td>
+<td style="text-align:right;">
+48.99
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tablet
+</td>
+<td style="text-align:right;">
+20.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desktop Computer
+</td>
+<td style="text-align:right;">
+17.17
+</td>
+</tr>
+</tbody>
+</table>
+<p>The majority of students use a combination of devices (our sample showed 14 unique combinations). Regardless of combination, 94.5 percent use a laptop, 45.9 percent uses a smart phone, 18.2 percent uses a tablet, and 17.1 percent use a desktop computer. While, unsurprisingly laptops are the most widely used, our sample may report a higher number than is accurate. Our sample may skew more towards those who own laptops. This could be because of the nature of having an online survey in which respondents need to use a tech device, limitations we have in physically distributing the survey (leading to online distribution), etc.</p>
+<hr />
+</div>
+</div>
+<div id="reported-changes-in-education-behavior" class="section level3">
+<h3>Reported Changes In Education Behavior</h3>
+<div id="question-how-do-students-view-various-aspects-of-their-involvement-in-online-learning-compared-to-prior-to-the-outbreak." class="section level4">
+<h4>Question: How do students view various aspects of their involvement in online learning compared to prior to the outbreak.</h4>
+<p>The table and plot bellow summarizes the responses to a series of questions related to how students view various aspects of their involvement in online learning compared to prior to the outbreak. The first question, above, asks whether respondents believe their focus on school work has changed since the outbreak. Respondents can indicate each item has increased, decreased, or remained the same. The items are focus on school work, motivation on school work, time spent on school work, attendance to lectures and sections, and participation in lectures or sections. The last two questions include a &quot;not applicable&quot; response to allow sensible responses for those who do not attend traditional classes, such as music, art, or science students taking lab courses.</p>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Since outbreak
+</th>
+<th style="text-align:right;">
+Focus
+</th>
+<th style="text-align:right;">
+Motivation
+</th>
+<th style="text-align:right;">
+Time
+</th>
+<th style="text-align:right;">
+Attendance
+</th>
+<th style="text-align:right;">
+Participation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Increased
+</td>
+<td style="text-align:right;">
+6.06
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+<td style="text-align:right;">
+25.76
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+<td style="text-align:right;">
+11.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+11.62
+</td>
+<td style="text-align:right;">
+9.09
+</td>
+<td style="text-align:right;">
+24.24
+</td>
+<td style="text-align:right;">
+48.99
+</td>
+<td style="text-align:right;">
+30.30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Decreased
+</td>
+<td style="text-align:right;">
+82.32
+</td>
+<td style="text-align:right;">
+87.37
+</td>
+<td style="text-align:right;">
+50.00
+</td>
+<td style="text-align:right;">
+42.42
+</td>
+<td style="text-align:right;">
+56.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>With the exeption of attendace, the majority of respondents indicate each item has decreased since the outbreak (and only a small percentage of respondents indicated their attendance has increased). This suggests students are, on average, finding their focus on school work, motivation for school work, time spent on school work, and participation in their classes is lower than it was prior to the outbreak.</p>
+<p><br></p>
+</div>
+<div id="question-before-the-covid-19-outbreak-where-did-you-primarily-do-your-school-work" class="section level4">
+<h4>Question: BEFORE the COVID-19 outbreak, where did you primarily do your school work?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Primary workspace
+</th>
+<th style="text-align:right;">
+Pre-outbreak
+</th>
+<th style="text-align:right;">
+Current
+</th>
+<th style="text-align:right;">
+PP Change
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+My place
+</td>
+<td style="text-align:right;">
+35.35
+</td>
+<td style="text-align:right;">
+95.96
+</td>
+<td style="text-align:right;">
+60.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Friend's place
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+<td style="text-align:right;">
+1.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University space
+</td>
+<td style="text-align:right;">
+54.55
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+-53.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Private establishment
+</td>
+<td style="text-align:right;">
+6.57
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+-6.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Public library or community center
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+-2.53
+</td>
+</tr>
+</tbody>
+</table>
+<p>The table to the right shows the percentages of our sample that primarilyp perform schoolwork in the listed spaces both before and since the outbreak of COVID-19. Prior to the outbreak, most respondents report primarily using university spaces for study, followed by their own place of residence. Currently, the vast majority of respondents (95.96%) report primarily performing school work at their current residence. The percentage point increase is largest for this category -- as we would expect given the stay-at-home orders -- and the largest decrease can be seen among respondents working at college or university spaces (libraries, computer labs, lounges, etc.). The only other category to show an increase is working at a friend's residence, but the increase is still quite small. The private establishment (coffee shop, restaurants, etc.) and public library or community center both decreased (and in the case of the latter, went to zero). Overall, these results are what we couldwould expet to see given social distancing and stay-at-home orders.</p>
+<hr />
+</div>
+</div>
+<div id="effectiveness-of-online-leanring-during-the-outbreak" class="section level3">
+<h3>Effectiveness Of Online Leanring During The Outbreak</h3>
+<div id="question-how-do-students-perceive-the-effectiveness-of-certain-aspects-with-e-learning-prior-to-the-outbreak" class="section level4">
+<h4>Question: How do students perceive the effectiveness of certain aspects with E-Learning prior to the outbreak</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-35-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>We wanted to learn more about how students perceive the effectiveness of certain aspects with E-Learning prior to the outbreak. The plot above summarizes the results we recived for this particualr question. In our survey, we asked students a series of questions relating to accommodating scenarios and course materials within an online environment. Respondents can indicate their answers by selecting whether each item is less effective, more effective, remains the same, or is unsure. The items that were asked are Accommodation for diverse learning needs, accommodation for special circumstances, and communication of course material.</p>
+<hr />
+</div>
+</div>
+<div id="education-resource-avaibility-during-the-outbreak" class="section level3">
+<h3>Education Resource Avaibility During The Outbreak</h3>
+<div id="question-how-do-students-feel-about-the-availblity-of-certain-college-resources-compare-to-prior-to-the-outbreak" class="section level4">
+<h4>Question: How do students feel about the availblity of certain college resources compare to prior to the outbreak</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-36-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>About 50% of our respondents reported academic tutoring to be less available. About 25% were unsure. We expected this to be the case because online tutoring services are likely to be of lesser quality and students are less likely to seek help over zoom office hours than in person. We also expected a certain group to be unsure because certain people don’t seek tutoring services.</p>
+<p>About 60% of our respondents reported office hours being just as available while about 25% reported it being less available. We expected this to be the case because the majority of professors and instructors are still making themselves available over zoom to help their students. Students may report it being less available due to the limitations of the type of help that may be given over Zoom.</p>
+<p>About 40% of survey respondents reported academic advising to be just as available and another 40% reported it being less available. We expected this to be the case because the majority of academic advisers, at least at the uw, are still working the same hours and offering help over email, phone, etc. It may be less available due to the limitations of the service.</p>
+<p>About 60% of our respondents were unsure about the availability of disability resources while about 25% reported it being less available. We had expected the majority of our respondents to be unsure about the availability of disability services because the majority of undergraduates aren’t using disability resources to begin with.</p>
+<p>About 40% were unsure about changes to the availability of career advising while about 30% reported it being less available. We had expected this to be the case because the majority of college undergraduates aren’t aware of the career advising resources on campus. It is also less likely for under-classmen to seek help from these services.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="graduation-plans" class="section level2">
+<h2>Graduation Plans</h2>
+<div id="changes-in-post-graduation-plans" class="section level3">
+<h3>Changes In Post-graduation Plans</h3>
+<p>This section explores the topic of how the COVID-19 outbreak has impacted student graduation plans. Here we assess our survey questions related to graduation plans before the outbreak and any changes that may have occured since the outbreak of COVID-19.</p>
+<hr />
+</div>
+<div id="pre-outbreak-post-graduation-plans" class="section level3">
+<h3>Pre-Outbreak Post Graduation Plans</h3>
+<div id="question-have-you-made-changes-to-your-plans-to-graduate" class="section level4">
+<h4>Question: Have you made changes to your plans to graduate?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Plan to Graduate
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percentage of Respodent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+I'm delaying graduation
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+11.11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+I'm trying to finish sooner
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+7.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+My plans to graduate have not changed
+</td>
+<td style="text-align:right;">
+162
+</td>
+<td style="text-align:right;">
+81.82
+</td>
+</tr>
+</tbody>
+</table>
+<p>The survey includes a series of questions related to graduation and post-graduation plans. Most survey respondents indicate that their plans to graduate remain intact. The table to the right shows that 82% of respondents indicate no change in their plans to graduate, 11% of survey respondents are delaying graduation, and about 7% of survey respondents are trying to finish their coursework sooner. These results are somewhat unexpected because the outbreak of COVID-19 has largely impacted how classes are taught, student housing, and employment among many other factors. We expect that more students would report delaying graduation and trying to finish classes sooner because the outbreak has simultaneously affected many aspects of students’ lives.</p>
+<p><br></p>
+</div>
+<div id="question-before-the-covid-19-outbreak-what-were-your-post-graduation-plans-check-all-that-apply" class="section level4">
+<h4>Question: BEFORE the COVID-19 outbreak, what were your post-graduation plans? (Check all that apply)</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Post Graduation Plan
+</th>
+<th style="text-align:right;">
+Percentage of Respodent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Look for a job
+</td>
+<td style="text-align:right;">
+56.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Graduate school or professional school
+</td>
+<td style="text-align:right;">
+34.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Undecided
+</td>
+<td style="text-align:right;">
+27.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Travel for an extended period of time
+</td>
+<td style="text-align:right;">
+21.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Volunteering or doing service work
+</td>
+<td style="text-align:right;">
+20.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+I had/have a new job or internship lined up
+</td>
+<td style="text-align:right;">
+15.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Keep my current job
+</td>
+<td style="text-align:right;">
+6.57
+</td>
+</tr>
+</tbody>
+</table>
+<p>The survey asks respondents about their pre-outbreak post-graduation plans. Many survey respondents indicate they plan to look for a job, although graduation status affects respondents’ post-graduation plans. About 56% of our total survey respondents report that they plan to look for a job post-graduation. Although, Figure 4.3.1 shows that 40% of 2020 graduates plan to find a new job post-graduation and 61% of respondents not graduating in 2020 plan to. Attending graduate or professional school (35%), traveling (22%), and volunteer or service work post-graduation (21%) are the next most common collective responses.</p>
+<p><br></p>
+</div>
+<div id="post-graduation-plans-and-graduation-status" class="section level4">
+<h4>Post Graduation Plans and Graduation Status</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-39-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>According to the figure above, non-graduating respondents are far more likely to indicate they will attend graduate or professional school post-graduation (75%), while graduates are less likely to (25%). Non-graduates are somewhat more likely to plan to travel post-graduation (54%), with graduates being slightly less likely to (45%). Continually, non-graduating respondents are also somewhat more likely to indicate they will volunteer or perform service work (59%) compared to graduates (42%). Meanwhile, 16% of all survey respondents indicate that they have or had a job or internship secured post-graduation, and 7% of survey respondents plan to keep their current job post-graduation. About 32% of non-graduating respondents plan to pursue a job or internship post-graduation, while the figure is 68% for graduates. Additionally, 39% of non-graduates plan to keep their current job post-graduation, while 62% of graduates do. Finally, 28% of all survey respondents report they are undecided about their post-graduation plans. Yet, 78% of non-graduates indicate they are undecided about their post-graduation plans, while 22% of graduates do.</p>
+<hr />
+</div>
+</div>
+<div id="reported-changes-in-post-graduation-plans" class="section level3">
+<h3>Reported Changes In Post Graduation Plans</h3>
+<div id="question-have-your-post-graduation-plans-changed-for-reasons-related-to-the-covid-19-crisis" class="section level4">
+<h4>Question: Have your post-graduation plans changed for reasons related to the COVID-19 crisis?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Post Graduation Plan Changes
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percentage of Respodent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+I do not expect anything to change
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+36.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nothing has changed yet, but I expect my plans will change
+</td>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:right;">
+35.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes, my post-graduation plans have already changed
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+28.28
+</td>
+</tr>
+</tbody>
+</table>
+<p>Many survey respondents indicate that their post-graduation plans have changed since the COVID-19 outbreak. According to the figure to the right, 36% of respondents indicate that they expect a change in their post-graduation plans, and 27% have already experienced a change. Meanwhile, 37% of survey respondents indicate that they do not expect their post-graduation plans to change. This means 73% of respondents have experienced some form of uncertainty about their post-graduation plans.</p>
+<p><br></p>
+</div>
+<div id="stratifying-post-graduation-plans-with-changes-in-post-graduation-plan" class="section level4">
+<h4>Stratifying Post-Graduation Plans with Changes in Post-Graduation Plan</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-41-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>The figure above shows 37% of respondents planning to perform volunteering and service work expect a change to their post-graduation plans, while 51% already had their plans change. Among respondents planning to travel, 30% expect a change and 54% have experienced a change. In fact, in an interview a graduating senior indicated that they planned to travel to Tokyo for the Tokyo Olympics after graduating, only for those plans to be cancelled. For those who were planning to keep their current job, 19% expect a change and 54% have already experienced a change. About 19% of respondents that secured a job or internship for post-graduation expect their post-graduation plans to change, and 52% have already seen their plans change. Lastly, among respondents planning to go to graduate or professional school post-graduation 38% expect a change to their plans and 23% have already experienced a change.</p>
+<p>These results show that respondents intending to pursue graduate or professional school were the least likely to experience a change to their post-graduation plans. Meanwhile, respondents’ plans to do volunteer and service work, travel, keep current jobs, and pursue a post-graduation job or internship have all changed dramatically.</p>
+<p><br></p>
+</div>
+<div id="changes-in-plans-to-search-for-post-graduation-job" class="section level4">
+<h4>Changes In Plans To Search For Post-Graduation Job</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-42-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>As shown in the Figure above, 41% of respondents planning to look for a new job post-graduation expect their plans to change. Separately, about 30% of respondents that have already experienced a change to their post-graduation plans plan to look for a new job post-graduation.Thus, many students have likely had to rely on future employment to alleviate the current uncertainties they are facing. Furthermore, some of the students who had a future job or internship revoked or students that lost a current job may also be represented in this sample. Many of these current uncertainties may have to do with the upsurge of jobs and internships being revoked and the limited time students have to make alternative post-graduation plans. More respondents indicating that they expect their plans to change implies that respondents cannot rely on a currently secure job or internship to remain secure.</p>
+<p><br></p>
+</div>
+<div id="change-in-post-graduation-plans-and-anxiety" class="section level4">
+<h4>Change in Post-Graduation Plans and Anxiety</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Change in Post Graduation Plans
+</th>
+<th style="text-align:right;">
+Experinced More Anxiety
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+I do not expect anything to change
+</td>
+<td style="text-align:right;">
+43.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nothing has changed yet, but I expect my plans will change
+</td>
+<td style="text-align:right;">
+65.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes, my post-graduation plans have already changed
+</td>
+<td style="text-align:right;">
+64.29
+</td>
+</tr>
+</tbody>
+</table>
+<p>Of the survey respondents who already had their post-graduation plans changed, 65.2 percent have experienced anxiety more often. In addition, for those who have not changed their post graduation plans as of yet but expect their post graduation plans to change in the future have shown a slightly increased experience of anxiety with respondents at 65.7 percent. Although the difference between is only 0.05%, there is a difference of 16 more survey responses that claimed to experience anxiety more often for those who expect their graduation plans to change in the future. This makes sense as these individuals are anticipating change but are unsure what the future holds for them, compared to those who already had changed their post graduation plans. For those who do not expect anything to change, the respondents who experienced about the same levels of anxiety and more often are very similar. Thus, we assume that their experience with anxiety is outside the variable of post-graduation plans.</p>
+<hr />
+</div>
+</div>
+<div id="graduates-with-pre-covid-19-jobs-or-internships-and-had-job-revoked" class="section level3">
+<h3>Graduates With Pre-COVID-19 Jobs or Internships and had Job Revoked</h3>
+<div id="post-graduation-job-or-internships-by-graduation-status" class="section level4">
+<h4>Post-Graduation Job or Internships by Graduation Status</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Job or Internship Post Graduation
+</th>
+<th style="text-align:left;">
+2020 Graduate
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percentage of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+112
+</td>
+<td style="text-align:right;">
+91.80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+72.37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+8.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+27.63
+</td>
+</tr>
+</tbody>
+</table>
+<p>According to the table to the right, 28% of respondents graduating in 2020 report that they have or had a job or internship secured for post-graduation, while 8% of respondents not graduating in 2020 did. This meets our expectations that graduates are more likely to have jobs or internships prepared for after graduation than non-graduates because they are closer to entering the labor market and are more likely to be prepared for their post-graduation.</p>
+<p><br></p>
+</div>
+<div id="experience-of-job-being-revoked-by-graduation-status." class="section level4">
+<h4>Experience of Job Being Revoked by Graduation Status.</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Job Revoked
+</th>
+<th style="text-align:left;">
+2020 Graduate
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Percentage of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+70.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+65.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+29.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+34.21
+</td>
+</tr>
+</tbody>
+</table>
+<p>This table to the right shows that 34% of 2020 graduates had a job revoked, while 30% of respondents not graduating in 2020 did. This implies that a number of our respondents, both graduating and not, had jobs they did not report they had secured for post-graduation revoked. The COVID-19 outbreak has made the job market very precarious. It’s extremely unlikely any students anticipated something on the scale of the COVID-19 outbreak when making post-graduation plans. Students who have worked hard to acquire jobs and internships in preparation for their post-graduation lives have instantly lost progress towards some of their most important career opportunities.</p>
+<p>It is both discouraging and difficult for students to unexpectedly lose a job or internship and have to begin the process of looking for a new job or internship in a suddenly tight job market. Graduates, as opposed to non-graduates, have limited time to devote towards searching for a new job or internship because they likely have to manage the cost of housing and transportation among other expenses. As a result, graduates who lost a job or internship may have to settle for a temporary or unideal job in order to pay for their expenses while looking for a new job or internship opportunity.</p>
+<p><br></p>
+</div>
+<div id="reported-pre-covid-19-job-or-internship-revoked." class="section level4">
+<h4>Reported Pre-COVID-19 Job or Internship Revoked.</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-46-1.png" width="672" style="display: block; margin: auto auto auto 0;" /> According to the Figure above, 39% of respondents that intend to keep their current job post-graduation have had their job revoked. Meanwhile, 52% of respondents that plan to pursue a job or internship post-graduation had their job revoked.</p>
+<p>These results partly indicate that respondents may have had a job or internship cancelled because of the COVD-19 outbreak or that respondents with current jobs were laid off. Continually, the respondents that lost their current job intended to continue being employed into their post-graduation. This implies that these respondents were likely relying on remaining employed in order to fulfil their plans. These students could have been relying on that career to help pay off finances, student loans, or other expenses. Moreover, students may rely on employment to pay off expenses so that they can pursue an alternative and more ideal form of employment such as a job or internship for a desired career. Thus, suddenly losing a source of employment that was originally perceived to be secure can impede students’ ability to make long-term career goals.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="health-changes" class="section level2">
+<h2>Health Changes</h2>
+<div id="changes-in-physical-and-mental-health" class="section level3">
+<h3>Changes in Physical and Mental Health</h3>
+<p>This section explores the topic of how the COVID-19 outbreak has impacted student health. Here we assess our survey questions related to changes in physical activity, as well as changes in mental health</p>
+<hr />
+</div>
+<div id="reported-changes-in-mental-health" class="section level3">
+<h3>Reported Changes in Mental Health</h3>
+<div id="question-compared-to-before-the-outbreak-of-covid-19-how-often-do-you-currently-experience-difficulty-concentrating-on-tasks-lack-of-motivation-to-do-daily-tasks-anxiety-and-feeling-sad-or-depressed" class="section level4">
+<h4>Question: Compared to before the outbreak of COVID-19, how often do you currently experience difficulty concentrating on tasks, lack of motivation to do daily tasks, anxiety, and feeling sad or depressed?</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>We asked students the following question in the survey: “Compared to before the outbreak of COVID-19, how often do you currently experience difficulty concentrating on tasks, lack of motivation to do daily tasks, anxiety, and feeling sad or depressed?” Participants were asked to answer these questions with the options: “Less often”, “About the same”, “More often”, and “Not applicable.” The Figure above summarizes the responses. The majority of survey respondents indicate they have experienced each of these categories more often compared to before the outbreak of COVID-19. In the end, 84.8% of our survey respondents indicate a lack of motivation for daily tasks happens more often and approximately 79.8% indicate more frequent difficulty concentrating on daily tasks.</p>
+<p>Approximately 57% of respondents indicate they experience anxiety more often and 55% of respondents indicate they experience sadness and/or depression more often compared to before the outbreak of COVID-19. One possible explanation that can affect these results is the amount of people that the survey respondents are living with currently. For those living with one or more people, they would experience less anxiety and sadness/depression compared to living alone.For survey respondents that reported that they lived alone, 60% reported feeling anxiety more often and 73.3% reported feeling depression more often. In comparison, 54.6% of survey respondents living with two more or more people indicated that they felt anxiety more often, and 52% indicated they experienced depression more often. However, concentration decreases for those living with one or more people compared to those living alone. Despite these differences in responses between concentration/motivation and anxiety/sadness, overall the responses that we received were what we expected.</p>
+<hr />
+</div>
+</div>
+<div id="reported-changes-in-physical-health-compared-to-before-the-covid-19-outbreak" class="section level3">
+<h3>Reported Changes in Physical Health (Compared to before the Covid-19 Outbreak)</h3>
+<div id="question-compared-to-before-the-covid-19-outbreak-do-you-currently-do-the-following-activities-more-or-less" class="section level4">
+<h4>Question: Compared to before the Covid-19 Outbreak, do you currently do the following activities more or less?</h4>
+</div>
+<div id="exercise" class="section level4">
+<h4>Exercise</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Physical Exercise
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+14.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+64.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+20.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, around 63 percent of respondents reported exercising less, 16 percent are exercising about the same amount, while 21 percent are exercising more. The significant decline in exercise could be attributed to the effects of social distancing guidelines and the stay-at-home order, closure of public and private gym facilities, mental health issues, etc.</p>
+<p><br></p>
+</div>
+<div id="sleep" class="section level4">
+<h4>Sleep</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Sleeping Habits
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+30.30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+20.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+48.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, around 47 percent of respondents reported sleeping more, 32 percent reported sleeping about the same amount, and 21 percent reported sleeping less. The significant amount of respondents who report sleeping more could be due to a reduction in time sensitive obligations, general inability to go outside and interact with others, the result of mental health issues, etc. The ones who report less sleep may be essential workers, have increased responsibilities in the household, increased course loads (voluntary or involuntary), and/or may be experiencing sleep issues related to mental health concerns.</p>
+<p><br></p>
+</div>
+<div id="watching-tv" class="section level4">
+<h4>Watching TV</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+TV Habits
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+23.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+5.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+68.18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+3.03
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, we found that there has been an increase in TV viewing hours. Around 66 percent of respondents reported watching more TV, 25 percent reported watching about the same amount, 5 percent reported watching less, and 3 percent responded “not applicable”. This finding was rather expected, as generally, people are confined to their houses and may have little else to entertain themselves.</p>
+<p><br></p>
+</div>
+<div id="playing-games" class="section level4">
+<h4>Playing Games</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gaming
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+35.86
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+9.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+47.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+7.07
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, around 46 percent of respondents reported playing more games, 35 percent reported playing about the same amount, 11 percent reported playing less, and 8 percent responded “not applicable”. Similar to TV watching, these results are more or less expected. The general idea is that students may play more games due to more free time, time at home, and/or to interact with friends and family.</p>
+<p><br></p>
+</div>
+<div id="reading" class="section level4">
+<h4>Reading</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gaming
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+54.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+11.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+30.30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+3.54
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, around 29 percent of respondents reported reading more, 57 percent reported reading about the same amount, 11 percent reported reading less, and 3 percent responded “not applicable”. The results are relatively consistent with expectations. Similar to games, the idea is that more time, especially, perhaps, on one’s own, may lead to increased reading. However, in certain cases, reading may also decrease due to reasons such as being an essential worker, having an increased course load, having more responsibilities at home, etc.</p>
+<p><br></p>
+</div>
+<div id="talking-to-people" class="section level4">
+<h4>Talking to People</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gaming
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+27.27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+12.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+59.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, 60 percent of respondents reported interacting more with people through messaging, phone calls, or video chat, 27 percent reported interacting about the same amount, 12 percent reported interacting less, and 1 percent responded “not applicable”. These results are relatively unsurprising. With social distancing guidelines, many cannot see their friends and family physically, necessitating chatting and other remote interaction. As for those that reported less interaction, this could be due to less free time, mental health issues, lack of access to devices and/or stable internet, etc.</p>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="alcohol-and-cannabis-consumption" class="section level3">
+<h3>Alcohol and Cannabis Consumption</h3>
+<p>Our survey includes questions on alcohol, cannabis, and other drug consumption. The figures bellow shows the percentage of respondents that report more, about the same, or less consumption since the outbreak of COVID-19. We assume not applicable means the respondent did not consume alcohol or cannabis prior to the outbreak, or since.</p>
+<div id="alcohol-consumption-compared-to-before-the-covid-19-outbreak" class="section level4">
+<h4>Alcohol consumption compared to before the COVID-19 outbreak</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Alcohol consumption
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+23.23
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+29.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+19.19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+28.28
+</td>
+</tr>
+</tbody>
+</table>
+<p>Around 20 percent of respondents reported consuming more alcohol, 22 percent reported consuming about the same amount, 28 percent reported consuming less, and 29 percent responded “not applicable”. Consuming more alcohol may be used to ease boredom and mental health issues. Reports of consuming less could be attributed to many students moving back home, the ban of social gatherings, increased difficulty in buying it, etc.</p>
+<p><br></p>
+</div>
+<div id="cannabis-consumption-compared-to-before-the-covid-19-outbreak" class="section level4">
+<h4>Cannabis consumption compared to before the COVID-19 outbreak</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Cannabis consumption
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+16.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+20.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+17.17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+45.45
+</td>
+</tr>
+</tbody>
+</table>
+<p>Around 18 percent of respondents reported consuming more marijuana, 16 percent reported consuming about the same amount, 20 percent reported consuming less, and 47 percent responded “not applicable”. Similar to alcohol, an increase in marijuana consumption could point to increased boredom, mental health issues, stress, etc. Alternatively, a decline in consumption could be due to many of the same reasons suggested in the alcohol section (moving back home, loss of income, etc.). Furthermore, our results may be biased, in part due to the potential stigma surrounding marijuana consumption. This may lead respondents to fear reporting usage and/or increased usage.</p>
+<p><br></p>
+</div>
+<div id="changes-in-alcohol-and-cannabis-use-by-age" class="section level4">
+<h4>Changes in alcohol and cannabis use by age</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-56-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The Figure above displays the difference in responses by age group. The figure shows that at least some of the reported changes are linked to age. Under-age respondents report higher percentages of Not Applicable (again we assume this means they are not using these substances) and less consumption. We also see higher percentages indicating the same amount of consumption and more consumption for our respondents of legal age to purchase these products. This supports the idea that it has been more difficult for people under the age of 21 to obtain alcohol and cannabis (illegally) since the outbreak. This effect appears larger for alcohol than cannabis.</p>
+<p><br></p>
+</div>
+<div id="other-drug-consumption-compared-to-before-the-covid-19-outbreak" class="section level4">
+<h4>Other drug consumption compared to before the COVID-19 outbreak</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Other Drug Usage
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+About the same
+</td>
+<td style="text-align:right;">
+18.18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Less
+</td>
+<td style="text-align:right;">
+16.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Not applicable
+</td>
+<td style="text-align:right;">
+62.63
+</td>
+</tr>
+</tbody>
+</table>
+<p>Compared to before the COVID-19 outbreak, around 2 percent of respondents reported consuming more non-prescription drugs (excluding alcohol and marijuana), 18 percent reported consuming about the same amount, 16 percent reported consuming less, and 64 percent responded “not applicable”. As expected, most students report not taking non-prescription drugs. The minority that reports consuming more may be doing so to self-medicate and/or to ease boredom. Those consuming less could be having more difficulty purchasing non-prescription drugs (social distancing, moving location, loss of income, etc.).</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="social-distancing" class="section level2">
+<h2>Social Distancing</h2>
+<div id="life-in-the-time-of-social-distancing" class="section level3">
+<h3>Life in the Time of Social Distancing</h3>
+<p>In this section we explore how the social life of our respondents has changed since the outbreak of COVID-19. The survey includes several questions about the respondents' social behavior and their attitudes toward social distancing and the stay at home order.</p>
+<hr />
+</div>
+<div id="changes-to-social-behavior" class="section level3">
+<h3>Changes to Social Behavior</h3>
+<div id="social-interactions" class="section level4">
+<h4>Social interactions</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+<p>The Figure above shows 59.6% of the respondents report using more messaging, phone calls, and video chat services, and 85.35% said that they visit their families or friends less often compared to before the outbreak. These results are unsurprising, considering the recent social distancing and stay-at-home order. It offers evidence that people have reduced physical contact with people as due to the stay-at-home order. However, this also shows the respondents are less exposed to quality social interaction, as people are forced to limit their physical social interaction with others, and virtual social interaction may not be a sufficient alternative.</p>
+<p><br></p>
+</div>
+<div id="entertainment" class="section level4">
+<h4>Entertainment</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p>About 68% of respondents report playing more games and 47% report watching more TV and movies. These forms of entertainment likely serve as alternatives for other forms of entertainment that are not feasible due to the stay-at-home order. It also can be said that students have more spare time due to the stay-at-home order (because they save the commuting time due to the transition of online learning, etc.) so they might spend more time on games and TV shows respectively.</p>
+<p>Unlike games and TV, most respondents (54.55%) spend the same amount of time on reading after the outbreak compared to before the outbreak. We assume that this is due to the fact that reading is not the most popular way to entertain themselves among the undergraduates’ age group. However, we could still see that more respondents (30.3%) reported spending more time on reading than those reporting to spend less time (11.62%). The mechanism behind this is presumably to be the same, as we discussed above.</p>
+<p><br></p>
+</div>
+<div id="other-changes-in-lifestyle-and-behaviors" class="section level4">
+<h4>Other changes in lifestyle and behaviors</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p>Similarly, we found most respondents (66.67%) visit the grocery stores less often. The discussion for social interaction seems to be fit for this topic as well. People try to avoid contact with humans as much as possible, so they choose to self-quarantine. Many apps in the markets (for example, Amazon Fresh and Instacart) allow people to order groceries delivered to the door. Therefore, it is not necessary to visit grocery stores to get what they need.</p>
+<p>For food delivery or take out, the difference between &quot;More often&quot; (41.92%) and &quot;Less often&quot; (36.36%) is very small, and the percentage are both high. Since restaurants are not essential business and ordered to be closed, it makes sense that those who usually dine in are forced to choose takeout or food delivery. Consequently, they order takeout or food delivery more often. On the other hand, for those who report to order takeout or food delivery less often, the chances are that they have more spare time to cook for themselves; they might be too bored so they start learning how to cook during this outbreak(according to what our interviewee said). It is also possible that they return to their parents' house, so their parents cook for them, thus reducing their needs for takeout and food delivery.</p>
+<p>The result for checking the news is very consistent with what we predicted. 47.47% of the respondents check the news more often, and we think it is very likely due to the evolving COVID-19 outbreak every day, and people have huge concerns about it. Again, it could be that people generally have more time to read the news during their self-quarantine.</p>
+<hr />
+</div>
+</div>
+<div id="attitudes-on-social-distancing" class="section level3">
+<h3>Attitudes on Social Distancing</h3>
+<div id="respondent-views-on-social-distancing" class="section level4">
+<h4>Respondent Views on Social Distancing</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>Most respondents agree that social distancing and stay-at-home order are necessary precautions and think that their response to COVID-19 has been appropriate. Interestingly, many of them do not have an opinion about whether people in their community are following these precautions or not. In all possibility the respondents stay at home most of the time so they do not have a clear picture of how they are doing because they do not see it.</p>
+<p>To test whether the respondents who believe to have appropriate responses are really following stay-at-home order, we managed to find if they attempt to avoid non-essential trips and maintain social distancing. Among those who think their response is proper, 88.51% of them report visiting families and friends less often; 68.39% report visiting grocery stores less often; 68.96% report visiting parks less often. Therefore, we assume that the majority of our respondents have had appropriate responses to the orders.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="financial-changes" class="section level2">
+<h2>Financial Changes</h2>
+<div id="financial-and-employment-changes" class="section level3">
+<h3>Financial and Employment Changes</h3>
+<p>In this section we explore our survey questions that relate to employment and finances. We show the changes our respondents experienced in terms of employment, changes in the sources of funds used toward their education, and whether they experience difficulties paying for a set of items.</p>
+<hr />
+</div>
+<div id="employment-changes" class="section level3">
+<h3>Employment changes</h3>
+<div id="question-were-you-employed-at-the-time-of-the-covid-19-outbreak" class="section level4">
+<h4>Question: Were you employed at the time of the COVID-19 outbreak?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Prior Employment
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No, I was not employed
+</td>
+<td style="text-align:right;">
+46.97
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes, full time
+</td>
+<td style="text-align:right;">
+6.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes, part time
+</td>
+<td style="text-align:right;">
+46.46
+</td>
+</tr>
+</tbody>
+</table>
+<p>The outbreak of COVID-19 has caused significant disruptions in the economy and the labor market in particular. The Table X shows the breakdown of employment status in our sample prior to the outbreak. About half (47%) of the sample was not employed prior to the outbreak (4.6% of which started a new job since), 6.6% were employed full time, and 46.5% were employed part time.</p>
+<p><br></p>
+</div>
+<div id="question-how-has-your-employment-status-changed-since-the-covid-19-outbreak" class="section level4">
+<h4>Question: How has your employment status changed since the COVID-19 outbreak?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Changes to Employment
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Laid off
+</td>
+<td style="text-align:right;">
+16.19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nothing has changed
+</td>
+<td style="text-align:right;">
+23.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Quit
+</td>
+<td style="text-align:right;">
+7.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Still technically employed but not currently working
+</td>
+<td style="text-align:right;">
+20.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Working fewer hours
+</td>
+<td style="text-align:right;">
+21.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Working more hours
+</td>
+<td style="text-align:right;">
+9.52
+</td>
+</tr>
+</tbody>
+</table>
+<p>The survey also asks those respondents who were employed prior whether they experienced any changes in their employment since the outbreak. Of those employed prior to the outbreak, we find 16% were laid off, 7.6% quit, 21% are still technically employed but are not currently working, 22% are working fewer hours, 24% report no change in their hours, and 9.5% work more hours.</p>
+<p><br></p>
+</div>
+<div id="question-since-the-covid-19-outbreak-have-you-received-unemployment-insurance" class="section level4">
+<h4>Question: Since the COVID-19 outbreak, have you received unemployment insurance?</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Recieved unemployment insurance
+</th>
+<th style="text-align:right;">
+Percent Of Respondent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:right;">
+45.45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+46.97
+</td>
+</tr>
+</tbody>
+</table>
+<p>On the topic of unemployment insurance, 87 (47.0%) responded “No” for unemployment while only 9 (4.86%) responded “Yes”. 89 (48.1%) responded “NA”.</p>
+<hr />
+</div>
+</div>
+<div id="education-funding-source" class="section level3">
+<h3>Education Funding Source</h3>
+<div id="reported-changes-in-funding-sources." class="section level4">
+<h4>Reported changes in funding sources.</h4>
+<table class="table table-striped table-condensed" style="font-size: 13px; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Decreased
+</th>
+<th style="text-align:right;">
+Increased
+</th>
+<th style="text-align:right;">
+No change
+</th>
+<th style="text-align:right;">
+Not Applicable
+</th>
+<th style="text-align:left;">
+f_source
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+9.09
+</td>
+<td style="text-align:right;">
+8.08
+</td>
+<td style="text-align:right;">
+69.70
+</td>
+<td style="text-align:right;">
+13.13
+</td>
+<td style="text-align:left;">
+Parents/Guardians
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.53
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+40.91
+</td>
+<td style="text-align:right;">
+55.56
+</td>
+<td style="text-align:left;">
+Partner
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3.03
+</td>
+<td style="text-align:right;">
+16.67
+</td>
+<td style="text-align:right;">
+53.03
+</td>
+<td style="text-align:right;">
+27.27
+</td>
+<td style="text-align:left;">
+Government loans/grants
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.52
+</td>
+<td style="text-align:right;">
+1.52
+</td>
+<td style="text-align:right;">
+47.98
+</td>
+<td style="text-align:right;">
+48.99
+</td>
+<td style="text-align:left;">
+Private loans
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3.54
+</td>
+<td style="text-align:right;">
+2.53
+</td>
+<td style="text-align:right;">
+59.09
+</td>
+<td style="text-align:right;">
+34.85
+</td>
+<td style="text-align:left;">
+Scholarships
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28.79
+</td>
+<td style="text-align:right;">
+5.56
+</td>
+<td style="text-align:right;">
+42.93
+</td>
+<td style="text-align:right;">
+22.73
+</td>
+<td style="text-align:left;">
+Personal Income
+</td>
+</tr>
+</tbody>
+</table>
+<p>Economic conditions, especially insecurity, related to the outbreak of COVID-19, the stay-at-home order, and social distancing have lively impacted students’ ability to fund their education. To get at this issue, the survey includes a series of questions on the sources from which respondents receive funding toward their education.</p>
+<p>The table to the right shows the perceived changes in respondents' education funding sources. The funding received from these sources can either decrease, increase, or remain the same. Respondents can also indicate funding source is not applicable, meaning it wasn't a source of funding either before or since the outbreak.</p>
+<p>The category with the greatest share reporting a decrease is personal income at 28.79%. We imagine if the survey was administered at a later date the number of respondents reporting decreases in various funding might greater as the economic consequences of the crisis take effect. The category with the largest percentage of the sample reporting an increase is funding from the govenrment. This could be due to respondents receiving funds from the CARES Act (21.21%), unemployment insurance (7.58%), or other</p>
+<hr />
+</div>
+</div>
+<div id="difficulty-paying-expenses" class="section level3">
+<h3>Difficulty Paying Expenses</h3>
+<div id="changes-in-difficulty-oaying-for-essential-items" class="section level4">
+<h4>Changes In Difficulty Oaying For Essential Items</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p>The Figure above shows participant responses for healthcare, groceries, transportation and rents/utilities. It’s encouraging to see the modal response in each case is “No change,” and no change accounts for the majority of responses in transportation, healthcare, and groceries. A large proportion of participants report no change in their ability to pay for healthcare, suggesting many respondents’ access to healthcare is relatively stable. We imagine many of these respondents receive healthcare through parents, an employer, their school, or a government program, which likely haven’t been affected (at least yet) by the outbreak and associated economic consequences.</p>
+<p>Still, roughly ⅓ of respondents report more difficulty in paying for rent/utilities and groceries. Even healthcare is reported to be more difficult to access by about 18% of the sample. This reflects the increase in economic precarity we anticipated to find. It is interesting that more respondents reported transportation was less difficult to pay for than more difficult. However, this can probably be explained by (1) the stay at home order reducing the need for transportation altogether and (2) the historically low price of crude oil has led to remarkably low fuel prices. Next we look to see whether these responses differ based on responses to other questions in our survey. To make this easier to view, instead of showing all four responses, the next three figures display the net change in difficulty (more difficult - less difficult) for each type of expense. We investigate whether first generation status, changes in employment, and changes in income influence the net change in difficulty for all four items. Given the unique nature of the transportation responses, we will mostly focus on the other three.</p>
+<p><br></p>
+</div>
+<div id="understanding-how-more-difficulty-in-paying-for-certain-expenses-is-affected-by-changes-in-personal-income" class="section level4">
+<h4>Understanding How More Difficulty in Paying for Certain Expenses is affected by Changes in Personal Income</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p>The figure above shows participants experincing more difficulty paying rent/utilities is associated with income changes in an expected way. The subset reporting a decrease in income has a much larger count than the other categories. This pattern seems to also appear in expense categories of Transportation and Groceries as well.</p>
+<p>Healthcare specifically is interesting because the subset reporting &quot;No Change&quot; in income since the outbreak shows the highest count with experincing difficulty in paying for this category. This implies respondents feel an increase in difficulty regardless of whether their income increased or decreased. This finding could relate to the fact that income, access to health care, and need for healthcare spending (i.e. whether the respondent happened to need medical attention or not) are not tightly connected.</p>
+<p><br></p>
+</div>
+<div id="understanding-how-more-difficulty-in-paying-for-certain-expenses-is-affected-by-generation-status" class="section level4">
+<h4>Understanding How More Difficulty in Paying for Certain Expenses is affected by Generation Status</h4>
+<p><img src="SurveySummary_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<p>The Figure above shows participants who experince more difficulty in paying for these four categories, stratified by first generation status. First generation participants have experinced more difficulty than their counterparts in the expense category of Rent and Utilities. Assuming first generation status is a reasonable proxy for SES, this suggests lower SES is associated with more difficulty paying for rent/utilities. For the three other expenses, both first generation students and non-first generation students within the subset of participants who experince more difficulty seem to be about the same.</p>
+<hr />
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

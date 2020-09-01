@@ -1,0 +1,11 @@
+name: "cars"
+name: "my-website"
+navbar:
+  title: "My Website"
+  left:
+    - text: "Home"
+      href: SurveySummary.html
+output:
+  html_document:
+    theme: journal
+
