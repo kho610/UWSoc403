@@ -1,5 +1,6 @@
 ---
-title: "College Student Life During the COVID-19 Outbreak"
+title: "Research Appendix Survey Findings"
+author: "Here we report the findings from our survey. The appendix is organized around themes, including general background information, housing, online education, graduation and post-graduation, physical and mental health, social relationships and social distancing, financial difficulties, and employment."
 ---
 
 ```{r Setup, include = FALSE} 
@@ -11,57 +12,8 @@ library(kableExtra)
 
 ```
 
+
 # {.tabset}
-
-## Home
-
-### Spring 2020 Sociology 403 Research Practicum Appendix
-
----
-
-### Table Of Contents
-1. Research Overview
-1. Background Information and Demographics
-2. Housing Related Questions
-3. Online Learning During The Outbreak
-4. Changes in Post-graduation Plans
-5. Changes in Physical and Mental Health
-6. Life in the Time of Social Distancing
-7. Financial and Employment Changes
-
-### Research Team 
-
-**Instructor:**\
-Steven M. Karceski 
-
-**Students:**\
-Nathan Abei, Bezawit Belete, Alex Chan, Kevin Daugard, Jessica Edge,\
-Kenton Ho, Neil Kato, Xiaoran Liu, Allan Louie, Yasmin Solano, Colin Yao
-
-## Overview
-
-### Research Overview
-
-On March 6, only weeks before the start of the Spring quarter, the University of Washington suspended in-person instruction due to the outbreak of COVID-19. The spring 2020 quarter has been conducted entirely online, including our class. Typically, SOC 403 classes decide on a research topic with the help of our friends at the City of Seattle. Past classes have studied a variety of issues, most recently how undergraduate students are impacted by labor and housing policies.
-
-This quarter we studied how undergraduate students are dealing with the changes related to COVID-19. We believe our research is important because students will likely experience the crisis in a way that is unique from other groups. Undergraduate students are at a formative stage of life where they learn important skills to enter the labor market, (often) learn how to live on their own, and make social ties that provide benefits long into the future. College experiences teach students how to act in various social and professional contexts, socializing them in adult life. Disruption of and changes to these processes may have long-term consequences, so understanding the changes experienced by students is key. 
-
-### Data Collection
-
-To investigate how undergraduate students are dealing with the changes associated with the outbreak of COVID-19 and the transition to online learning we collected data with a survey and follow-up interviews. 
-
-### Survey
-
-In order to determine the impact of COVID-19 on undergraduate students in Washington State, we used a survey with the option of follow-up interviews. We created the survey with Google Forms. Our survey focuses on four main areas: (1) online learning experience; (2) graduation and post-graduation plans; (3) social, physical, and mental health, and (4) economic and financial characteristics. Given the large amount of overlap and connection between certain topics, using four main themes will provide the most detailed and straightforward description of our findings. 
- 
-Due to the current “Stay Home, Stay Healthy” order in Washington State, we were limited in our means to promote participation. Promotional methods proven to be effective in the past were not an option, such as passing out flyers around campus, administering the survey in-person with iPads (also on campus), and posting flyers on and off campus
-
-The constraints related to quarantine and online learning meant we primarily relied on social media and our personal networks. We created digital advertisements to circulate around social media, among our friends, and to instructors and professors. These platforms include Twitter, Instagram, Facebook, and Tinder – the latter not working nearly as well as the others.
-
-### Our Survey Sample
-
-Our survey went live on **May 7, 2020** and was closed on **May 27, 2020**. The survey was up for 20 days and garnered a total of 198 responses. Out of the 198 responses roughly ¾ (73%) attended one of the three University of Washington campuses, which, again, is likely the result of primarily distributing our survey through our own social networks.
-
 
 ## Background Information and Demographics
 

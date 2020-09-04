@@ -1,13 +1,13 @@
-name: "my-website"
+name: "UWSoc403"
 output_dir: "docs"
 navbar:
-  title: "My Website"
+  title: "UW Soc 403"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Research"
+    - text: "Overview"
+      href: overview.html
+    - text: "Findings"
       href: SurveySummary.html
 output:
   html_document:
